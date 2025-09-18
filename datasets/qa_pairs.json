@@ -1,0 +1,34 @@
+[
+  {
+    "question": "What is machine learning?",
+    "answer": "Machine learning is a subset of AI that enables computers to learn and improve from experience without being explicitly programmed."
+  },
+  {
+    "question": "How does deep learning work?",
+    "answer": "Deep learning uses artificial neural networks with multiple layers to automatically learn patterns and features from data."
+  },
+  {
+    "question": "What are the main types of machine learning?",
+    "answer": "The three main types are supervised learning, unsupervised learning, and reinforcement learning."
+  },
+  {
+    "question": "What is natural language processing?",
+    "answer": "NLP is a field of AI that helps computers understand, interpret, and generate human language."
+  },
+  {
+    "question": "What are transformers in AI?",
+    "answer": "Transformers are a type of neural network architecture that uses self-attention mechanisms and are particularly effective for language tasks."
+  },
+  {
+    "question": "How does computer vision work?",
+    "answer": "Computer vision uses algorithms and neural networks to identify and analyze visual content in images and videos."
+  },
+  {
+    "question": "What is reinforcement learning used for?",
+    "answer": "Reinforcement learning is used for game playing, robotics, autonomous vehicles, and decision-making systems."
+  },
+  {
+    "question": "What are large language models?",
+    "answer": "Large language models are AI systems trained on vast amounts of text data to understand and generate human-like text."
+  }
+]
