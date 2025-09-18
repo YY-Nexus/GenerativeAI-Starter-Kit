@@ -1,0 +1,29 @@
+# Optional enhanced capabilities
+# GPU support (uncomment if using CUDA)
+# torch-audio>=2.0.0
+# torchaudio>=2.0.0
+
+# Advanced multimodal models
+diffusers>=0.20.0
+controlnet-aux>=0.4.0
+
+# Industry specific
+pypdf>=3.15.0
+python-docx>=0.8.11
+xlsxwriter>=3.1.0
+
+# Advanced fine-tuning
+peft>=0.5.0
+datasets>=2.14.0
+evaluate>=0.4.0
+accelerate>=0.21.0
+
+# Monitoring and logging
+wandb>=0.15.0
+tensorboard>=2.14.0
+mlflow>=2.5.0
+
+# Cloud providers
+boto3>=1.28.0
+azure-storage-blob>=12.17.0
+google-cloud-storage>=2.10.0

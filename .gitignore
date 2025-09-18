@@ -1,0 +1,117 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment variables
+.env
+.env.local
+.env.production
+*.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Data and model files
+data/vector_stores/
+data/sample_datasets/*.large
+*.pkl
+*.model
+*.bin
+*.safetensors
+model_cache/
+models/
+
+# Logs
+logs/
+*.log
+wandb/
+mlruns/
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+
+# Test coverage
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Node.js (if used for frontend)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# API keys and secrets
+api_keys.txt
+secrets.json
+credentials.json
+
+# Large files that shouldn't be in git
+*.zip
+*.tar.gz
+*.7z
+*.rar
+
+# Vector database files
+chroma_db/
+faiss_index/
+*.index
+*.metadata
+
+# Output directories
+outputs/
+results/
+generated/

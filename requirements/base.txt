@@ -1,0 +1,40 @@
+# Core AI/ML libraries
+openai>=1.0.0
+langchain>=0.1.0
+langchain-community>=0.0.10
+chromadb>=0.4.0
+faiss-cpu>=1.7.0
+sentence-transformers>=2.2.0
+transformers>=4.30.0
+torch>=2.0.0
+numpy>=1.24.0
+pandas>=2.0.0
+
+# Vector databases and search
+pinecone-client>=2.2.0
+weaviate-client>=3.20.0
+qdrant-client>=1.6.0
+
+# Multimodal capabilities  
+pillow>=10.0.0
+opencv-python>=4.8.0
+librosa>=0.10.0
+whisper>=1.0.0
+
+# Web frameworks and APIs
+fastapi>=0.100.0
+streamlit>=1.25.0
+gradio>=3.40.0
+uvicorn>=0.23.0
+
+# Data processing
+beautifulsoup4>=4.12.0
+requests>=2.31.0
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+
+# Development tools
+jupyter>=1.0.0
+notebook>=7.0.0
+black>=23.0.0
+pytest>=7.4.0

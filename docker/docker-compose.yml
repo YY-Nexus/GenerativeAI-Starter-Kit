@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  generativeai-starter:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: generativeai-starter-kit
+    volumes:
+      - ../data:/app/data
+      - ../logs:/app/logs
+      - ../outputs:/app/outputs
+    environment:
+      - PYTHONPATH=/app/src
+    env_file:
+      - ../.env
+    ports:
+      - "8888:8888"  # Jupyter
+      - "8000:8000"  # FastAPI/Streamlit
+    command: >
+      bash -c "
+        echo 'Starting GenerativeAI Starter Kit...' &&
+        jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root --notebook-dir=/app/notebooks &
+        tail -f /dev/null
+      "
+
+  # Optional: Vector databases
+  chromadb:
+    image: chromadb/chroma:latest
+    container_name: chromadb
+    ports:
+      - "8001:8000"
+    volumes:
+      - chroma_data:/chroma/chroma
+    environment:
+      - CHROMA_SERVER_HOST=0.0.0.0
+      - CHROMA_SERVER_HTTP_PORT=8000
+
+  # Optional: Qdrant vector database
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: qdrant
+    ports:
+      - "6333:6333"
+    volumes:
+      - qdrant_data:/qdrant/storage
+
+volumes:
+  chroma_data:
+  qdrant_data:
