@@ -260,7 +260,7 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) for deta
 
 - 🐛 **Issues**: [GitHub Issues](https://github.com/YY-Nexus/GenerativeAI-Starter-Kit/issues)
 - 💬 **Discussions**: [GitHub Discussions](https://github.com/YY-Nexus/GenerativeAI-Starter-Kit/discussions)
-- 📧 **Email**: support@generativeai-kit.com
+- 📧 **Email**: admin@0379.email
 
 ---
 
