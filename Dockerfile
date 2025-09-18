@@ -1,5 +1,5 @@
 # 基于 genai-starter-kit 的标准化 Dockerfile
-FROM python:3.10-slim
+FROM python:3.13-slim
 
 LABEL maintainer="YY-Nexus <contact@yynexus.com>"
 LABEL description="GenerativeAI-Starter-Kit Docker Image"
