@@ -1,0 +1,76 @@
+[
+  {
+    "title": "Introduction to Machine Learning",
+    "content": "\n            Machine Learning (ML) is a subset of artificial intelligence that focuses on algorithms \n            and statistical models that enable computer systems to improve their performance on a \n            specific task through experience. Unlike traditional programming where explicit \n            instructions are provided, ML systems learn patterns from data to make predictions \n            or decisions. The three main types of machine learning are supervised learning, \n            unsupervised learning, and reinforcement learning. Supervised learning uses labeled \n            data to train models, unsupervised learning finds patterns in unlabeled data, and \n            reinforcement learning learns through interaction with an environment.\n            ",
+    "category": "basics",
+    "tags": [
+      "machine learning",
+      "AI",
+      "algorithms",
+      "supervised",
+      "unsupervised"
+    ]
+  },
+  {
+    "title": "Deep Learning Fundamentals",
+    "content": "\n            Deep Learning is a specialized subset of machine learning that uses artificial neural \n            networks with multiple layers (hence \"deep\") to model and understand complex patterns \n            in data. These networks are inspired by the structure and function of the human brain, \n            consisting of interconnected nodes (neurons) organized in layers. Each layer transforms \n            the input data through weighted connections and activation functions. Deep learning has \n            revolutionized fields such as computer vision, natural language processing, and speech \n            recognition. Popular frameworks include TensorFlow, PyTorch, and Keras, which provide \n            tools for building and training deep neural networks.\n            ",
+    "category": "advanced",
+    "tags": [
+      "deep learning",
+      "neural networks",
+      "TensorFlow",
+      "PyTorch",
+      "computer vision"
+    ]
+  },
+  {
+    "title": "Natural Language Processing Overview",
+    "content": "\n            Natural Language Processing (NLP) is a branch of artificial intelligence that helps \n            computers understand, interpret, and generate human language in a valuable way. NLP \n            combines computational linguistics—rule-based modeling of human language—with statistical, \n            machine learning, and deep learning models. Key NLP tasks include text classification, \n            sentiment analysis, named entity recognition, machine translation, question answering, \n            and text summarization. Modern NLP heavily relies on transformer architectures like \n            BERT, GPT, and T5, which have achieved state-of-the-art results across various language \n            understanding and generation tasks.\n            ",
+    "category": "applications",
+    "tags": [
+      "NLP",
+      "language processing",
+      "BERT",
+      "GPT",
+      "transformers",
+      "text analysis"
+    ]
+  },
+  {
+    "title": "Computer Vision Applications",
+    "content": "\n            Computer Vision is a field of artificial intelligence that trains computers to interpret \n            and understand visual information from the world. It involves acquiring, processing, \n            analyzing, and understanding digital images and videos to extract high-dimensional data \n            from the real world. Common applications include image classification, object detection, \n            facial recognition, medical image analysis, autonomous vehicles, and augmented reality. \n            Convolutional Neural Networks (CNNs) are the foundation of most modern computer vision \n            systems, with architectures like ResNet, VGG, and EfficientNet achieving remarkable \n            performance on various visual recognition tasks.\n            ",
+    "category": "applications",
+    "tags": [
+      "computer vision",
+      "CNN",
+      "image classification",
+      "object detection",
+      "ResNet"
+    ]
+  },
+  {
+    "title": "Reinforcement Learning Basics",
+    "content": "\n            Reinforcement Learning (RL) is a type of machine learning where an agent learns to make \n            decisions by performing actions in an environment to maximize cumulative reward. Unlike \n            supervised learning, RL doesn't require labeled training data. Instead, the agent learns \n            through trial and error, receiving feedback in the form of rewards or penalties. Key \n            concepts include states, actions, rewards, policies, and value functions. Popular RL \n            algorithms include Q-learning, policy gradients, and actor-critic methods. RL has shown \n            remarkable success in game playing (like AlphaGo), robotics, autonomous vehicles, and \n            recommendation systems.\n            ",
+    "category": "advanced",
+    "tags": [
+      "reinforcement learning",
+      "Q-learning",
+      "policy gradients",
+      "AlphaGo",
+      "robotics"
+    ]
+  },
+  {
+    "title": "Generative AI and Large Language Models",
+    "content": "\n            Generative AI refers to artificial intelligence systems capable of creating new content, \n            including text, images, code, and other media. Large Language Models (LLMs) like GPT-3, \n            GPT-4, and ChatGPT are prominent examples that can generate human-like text for various \n            tasks including writing, coding, and question answering. These models are trained on \n            vast amounts of text data using transformer architectures and techniques like \n            self-attention. The emergence of generative AI has sparked discussions about creativity, \n            ethics, and the future of work, while opening new possibilities for content creation, \n            education, and human-AI collaboration.\n            ",
+    "category": "emerging",
+    "tags": [
+      "generative AI",
+      "LLM",
+      "GPT",
+      "ChatGPT",
+      "transformers",
+      "content creation"
+    ]
+  }
+]

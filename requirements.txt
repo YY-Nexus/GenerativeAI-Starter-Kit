@@ -1,0 +1,52 @@
+# Core AI/ML libraries
+torch>=2.0.0
+transformers>=4.30.0
+langchain>=0.1.0
+langchain-community>=0.0.20
+sentence-transformers>=2.2.0
+faiss-cpu>=1.7.0
+chromadb>=0.4.0
+
+# Multimodal libraries
+pillow>=9.0.0
+opencv-python>=4.8.0
+diffusers>=0.21.0
+clip-by-openai>=1.0
+
+# Data processing
+pandas>=1.5.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+matplotlib>=3.6.0
+seaborn>=0.12.0
+
+# Text processing
+nltk>=3.8
+spacy>=3.5.0
+jieba>=0.42.1  # For Chinese text processing
+
+# API and web frameworks
+fastapi>=0.100.0
+uvicorn>=0.22.0
+streamlit>=1.25.0
+gradio>=3.40.0
+
+# Utilities
+python-dotenv>=1.0.0
+tqdm>=4.65.0
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+pydantic>=2.0.0
+
+# Development tools
+pytest>=7.4.0
+black>=23.0.0
+flake8>=6.0.0
+jupyter>=1.0.0
+notebook>=6.5.0
+
+# Optional: OpenAI API (uncomment if needed)
+# openai>=1.0.0
+
+# Optional: Hugging Face Hub
+huggingface-hub>=0.16.0

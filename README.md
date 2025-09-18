@@ -1,46 +1,66 @@
-# GenerativeAIExamples: Quick Start & Standardized Guide
+# GenerativeAI-Starter-Kit
 
-Welcome to GenerativeAIExamples! This project is designed for all levels of users, especially beginners, making generative AI development simple and accessible.
+🚀 **A comprehensive, beginner-friendly Generative AI development toolkit**
 
----
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-## 1. Project Overview
+[![RAG](https://img.shields.io/badge/RAG-✓-brightgreen.svg)](#-rag-retrieval-augmented-generation)
 
-GenerativeAIExamples is a multi-scenario, multi-model generative AI application library. It supports text, speech, image, and more, suitable for learning, experimentation, and rapid development.
+[![Multimodal](https://img.shields.io/badge/Multimodal-✓-brightgreen.svg)](#multimodal-applications)
 
----
+[![Fine-tuning](https://img.shields.io/badge/Fine--tuning-✓-brightgreen.svg)](#model-fine-tuning)
 
-## 2. Quick Start
+Welcome to GenerativeAI-Starter-Kit! This repository provides everything you need to get started with Generative AI, from basic concepts to production-ready applications. Perfect for learning, rapid prototyping, and real-world deployment.
 
-### Environment Setup
+## 🌟 What's Included
 
-1. Install [Python 3.8+](https://www.python.org/downloads/)
-2. Recommended: [VS Code](https://code.visualstudio.com/) editor
-3. Clone the project:
+### 🧠 Core AI Examples
 
-   ```sh
-   git clone https://github.com/NVIDIA/GenerativeAIExamples.git
-   cd GenerativeAIExamples
-   ```
+- **🔍 RAG (Retrieval-Augmented Generation)**: Build intelligent document Q&A systems
+- **🎨 Multimodal Applications**: Work with text, images, and cross-modal tasks
+- **🎯 Model Fine-tuning**: Adapt pre-trained models for specific domains
+- **🚀 Production-Ready APIs**: FastAPI servers with full documentation
 
-### Install All Dependencies
+### 🛠️ Development Tools
 
-Run in the project root:
+- **⚡ One-Click Setup**: Automated environment configuration
+- **📊 Interactive Notebooks**: Step-by-step Jupyter tutorials
+- **🔧 Configuration Management**: Easy YAML-based settings
+- **🧪 Testing Framework**: Comprehensive test suites
 
-```sh
-find . -name "requirements.txt" -exec pip install -r {} \;
+### 📚 Learning Resources
+
+- **📖 Multi-language Docs**: Complete guides in English and Chinese
+- **🎓 Progressive Tutorials**: From beginner to advanced
+- **💡 Best Practices**: Industry-standard approaches
+- **🔬 Research Examples**: Latest techniques and methods
+
+## 🚀 Quick Start
+
+### 1️⃣ Clone & Setup
+
+```bash
+git clone https://github.com/YY-Nexus/GenerativeAI-Starter-Kit.git
+cd GenerativeAI-Starter-Kit
+./automation/setup.sh
+source venv/bin/activate
 ```
 
----
+### 2️⃣ Try the Examples
 
-## 3. One-Click Launch & Batch Notebook Execution
+```bash
+# RAG System Demo
+python examples/rag/simple_rag.py
 
-### Start API Service
+# Multimodal Web App
+python examples/multimodal/image_text_app.py --web
 
-```sh
-cd RAG/src/chain_server
-pip install -r requirements.txt
-python main.py
+# Fine-tuning Demo
+python examples/fine-tuning/text_classification_tuning.py
+
+# Start API Server
+python automation/api_server.py
 ```
 
 ### Batch Run All Notebooks
@@ -93,81 +113,20 @@ See `docs/README.md` or open a Github Issue for more help.
 
 ## 8. Contributing & Feedback
 
+- Pull Requests welcome for code, docs, or examples
+- Report issues with clear steps and environment details
+- All contributions must comply with the LICENSE
+
+---
+
 ## 9. Standardization & Usability Commitment
 
-> This project is committed to making generative AI development easy for everyone. Join our community and start building today!
-
-## 10. 文档同步链（DocumentSyncChain）使用指南
-
-DocumentSyncChain 支持文档唯一性校验、向量数据库存储、MySQL元数据写入、LLM智能摘要。
-
-### CLI 批量同步示例
-
-```sh
-python RAG/examples/basic_rag/langchain/sync_docs.py --file your_file.txt --collection doc_vectors --mysql_host 127.0.0.1 --mysql_user root --mysql_password yourpass --mysql_db yyc3_GenerativeAI
-```
-
-### FastAPI 接口示例
-
-启动服务：
-
-上传文档：
-
-```sh
-curl -F "file=@your_file.txt" http://localhost:8000/sync_doc/
-```
-
-### pytest 单元测试
-
-```sh
-pytest RAG/examples/basic_rag/langchain/test_chains.py
-```
-
-### 代码集成示例
-
-```python
-from chains import DocumentSyncChain, ingest_docs
-vector_db_config = {"collection_name": "doc_vectors"}
-mysql_config = {"host": "127.0.0.1", "user": "root", "password": "yourpass", "database": "yyc3_GenerativeAI"}
-chain = DocumentSyncChain(vector_db_config, mysql_config)
-docs = ingest_docs("your_file.txt")
-chain.process_and_store(docs)
-```
-
-更多高级用法见 chains.py 注释。
+- All scripts and docs use unified format, clear comments, and step-by-step instructions
+- Clear directory structure, modular organization for easy navigation and extension
+- Chinese and English documentation for global accessibility
+- Continuous improvement—feedback is welcome!
 
 ---
 
-## 11. 自动化交付与集成
-
-### PyPI 包发布
-
-- 包名：`genai-starter-kit`
-- 安装：
-
-   ```sh
-   pip install genai-starter-kit
-   ```
-
-- [PyPI 包主页](https://pypi.org/project/genai-starter-kit/)
-
-### Docker 镜像发布
-
-- 镜像名：`yanyuit/genai-starter-kit`
-- 拉取与运行：
-
-   ```sh
-   docker pull yanyuit/genai-starter-kit:latest
-   docker run -p 8000:8000 yanyuit/genai-starter-kit:latest
-   ```
-
-- [DockerHub 镜像主页](https://hub.docker.com/r/yanyuit/genai-starter-kit)
-
-### CI/CD 自动化
-
-- 推送代码到 main 分支，自动完成测试、构建、PyPI/Docker 发布、文档同步。
-
-- 相关脚本见 `.github/workflows/ci-cd.yml`，支持多版本测试、代码检查、安全扫描、文档自动发布。
-
----
 > This project is committed to making generative AI development easy for everyone. Join our community and start building today!
+>>>>>>> daf1912 (Initial commit: GenerativeAI-Starter-Kit project structure and docs)
