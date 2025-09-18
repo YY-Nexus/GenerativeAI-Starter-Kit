@@ -1,0 +1,72 @@
+[
+  {
+    "filename": "cat_on_table.jpg",
+    "description": "A fluffy orange cat sitting on a wooden table next to a window",
+    "tags": [
+      "cat",
+      "animal",
+      "table",
+      "indoor",
+      "pet"
+    ],
+    "objects": [
+      "cat",
+      "table",
+      "window"
+    ],
+    "scene": "indoor"
+  },
+  {
+    "filename": "sunset_mountain.jpg",
+    "description": "Beautiful sunset over snow-capped mountains with orange and pink sky",
+    "tags": [
+      "sunset",
+      "mountain",
+      "landscape",
+      "nature",
+      "sky"
+    ],
+    "objects": [
+      "mountains",
+      "sky",
+      "clouds"
+    ],
+    "scene": "outdoor"
+  },
+  {
+    "filename": "city_street.jpg",
+    "description": "Busy city street with people walking, cars, and tall buildings",
+    "tags": [
+      "city",
+      "street",
+      "urban",
+      "people",
+      "buildings"
+    ],
+    "objects": [
+      "people",
+      "cars",
+      "buildings",
+      "street"
+    ],
+    "scene": "urban"
+  },
+  {
+    "filename": "beach_waves.jpg",
+    "description": "Ocean waves crashing on a sandy beach with blue sky and white clouds",
+    "tags": [
+      "beach",
+      "ocean",
+      "waves",
+      "sand",
+      "nature"
+    ],
+    "objects": [
+      "waves",
+      "beach",
+      "sand",
+      "sky"
+    ],
+    "scene": "outdoor"
+  }
+]

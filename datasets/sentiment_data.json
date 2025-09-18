@@ -1,0 +1,122 @@
+[
+  {
+    "text": "Superb craftsmanship and attention to detail.",
+    "label": "positive"
+  },
+  {
+    "text": "Overpriced and underdelivered on promises.",
+    "label": "negative"
+  },
+  {
+    "text": "Top-notch quality and fast delivery.",
+    "label": "positive"
+  },
+  {
+    "text": "Amazing quality and fantastic customer service.",
+    "label": "positive"
+  },
+  {
+    "text": "I absolutely love this product! It exceeded my expectations.",
+    "label": "positive"
+  },
+  {
+    "text": "Awful experience, would not recommend to anyone.",
+    "label": "negative"
+  },
+  {
+    "text": "Reasonable product with some pros and cons.",
+    "label": "neutral"
+  },
+  {
+    "text": "Extremely disappointed with this purchase.",
+    "label": "negative"
+  },
+  {
+    "text": "Fair quality, gets the job done.",
+    "label": "neutral"
+  },
+  {
+    "text": "Average quality, meets basic requirements.",
+    "label": "neutral"
+  },
+  {
+    "text": "Outstanding performance and great value for money.",
+    "label": "positive"
+  },
+  {
+    "text": "Terrible quality, complete waste of money.",
+    "label": "negative"
+  },
+  {
+    "text": "Ordinary product, meets minimum expectations.",
+    "label": "neutral"
+  },
+  {
+    "text": "Incredible features and user-friendly interface.",
+    "label": "positive"
+  },
+  {
+    "text": "The product is okay, nothing special but functional.",
+    "label": "neutral"
+  },
+  {
+    "text": "Excellent build quality and beautiful design.",
+    "label": "positive"
+  },
+  {
+    "text": "This is the worst thing I've ever bought.",
+    "label": "negative"
+  },
+  {
+    "text": "Decent product with average performance.",
+    "label": "neutral"
+  },
+  {
+    "text": "Useless product with terrible design.",
+    "label": "negative"
+  },
+  {
+    "text": "Acceptable quality, could be better but workable.",
+    "label": "neutral"
+  },
+  {
+    "text": "Perfect for my needs, highly recommended!",
+    "label": "positive"
+  },
+  {
+    "text": "This is the best purchase I've made this year.",
+    "label": "positive"
+  },
+  {
+    "text": "Poor build quality and doesn't work as advertised.",
+    "label": "negative"
+  },
+  {
+    "text": "Regret buying this, total disappointment.",
+    "label": "negative"
+  },
+  {
+    "text": "It's fine for the price, not amazing but decent.",
+    "label": "neutral"
+  },
+  {
+    "text": "Wonderful experience from start to finish.",
+    "label": "positive"
+  },
+  {
+    "text": "Adequate for basic use, room for improvement.",
+    "label": "neutral"
+  },
+  {
+    "text": "Standard features, nothing extraordinary.",
+    "label": "neutral"
+  },
+  {
+    "text": "Cheaply made and broke after one use.",
+    "label": "negative"
+  },
+  {
+    "text": "Horrible customer service and defective product.",
+    "label": "negative"
+  }
+]
