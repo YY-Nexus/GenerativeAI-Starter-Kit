@@ -1,0 +1,2 @@
+[console_scripts]
+sync-docs = RAG.examples.basic_rag.langchain.sync_docs:main

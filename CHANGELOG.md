@@ -1,5 +1,6 @@
 # Changelog
-### Advanced AI Integration
+
+## Advanced AI Integration
 
 - 集成 LLM 智能摘要与向量数据库接口：
   - chains.py 新增 summarize_documents、llm_summarize、vectorize_documents 等函数，支持调用 OpenAI/LangChain API 实现智能摘要、embedding、向量化检索。
@@ -42,7 +43,7 @@ This release completely refactors the directory structure of the repository for 
 - Added new `community` (before `experimental`) example
   - Create a simple web interface to interact with different [selectable NIM endpoints](./community/llm-prompt-design-helper/). The provided interface of this project supports designing a system prompt to call the LLM.
 
-### Changed
+### Repository Restructuring
 
 - Major restructuring and reorganisation of the assets within the repository
   - Top level `experimental` directory has been renamed as `community`.
@@ -56,23 +57,23 @@ This release completely refactors the directory structure of the repository for 
   - `RetreivalAugmentedGeneration/frontend` is now residing under `RAG/src/rag_playground/default`.
   - `5 mins RAG No GPU` example under top level `examples` directory, is now under `community`.
 
-### Deprecated
+### Deprecated in 0.8.0
 
-  - Github pages based documentation is now replaced with markdown based documentation.
-  - Top level `examples` directory has been removed.
-  - Following notebooks were removed
-    - [02_Option(1)_NVIDIA_AI_endpoint_simple.ipynb](https://github.com/NVIDIA/GenerativeAIExamples/blob/v0.7.0/notebooks/02_Option(1)_NVIDIA_AI_endpoint_simple.ipynb)
-    - [notebooks/02_Option(2)_minimalistic_RAG_with_langchain_local_HF_LLM.ipynb](https://github.com/NVIDIA/GenerativeAIExamples/blob/v0.7.0/notebooks/02_Option(2)_minimalistic_RAG_with_langchain_local_HF_LLM.ipynb)
-    - [notebooks/03_Option(1)_llama_index_with_NVIDIA_AI_endpoint.ipynb](https://github.com/NVIDIA/GenerativeAIExamples/blob/v0.7.0/notebooks/03_Option(1)_llama_index_with_NVIDIA_AI_endpoint.ipynb)
-    - [notebooks/03_Option(2)_llama_index_with_HF_local_LLM.ipynb](https://github.com/NVIDIA/GenerativeAIExamples/blob/v0.7.0/notebooks/03_Option(2)_llama_index_with_HF_local_LLM.ipynb)
-
+- Github pages based documentation is now replaced with markdown based documentation.
+- Top level `examples` directory has been removed.
+- Following notebooks were removed
+- [02_Option(1)_NVIDIA_AI_endpoint_simple.ipynb](https://github.com/NVIDIA/GenerativeAIExamples/blob/v0.7.0/notebooks/02_Option(1)_NVIDIA_AI_endpoint_simple.ipynb)
+- [notebooks/02_Option(2)_minimalistic_RAG_with_langchain_local_HF_LLM.ipynb](https://github.com/NVIDIA/GenerativeAIExamples/blob/v0.7.0/notebooks/02_Option(2)_minimalistic_RAG_with_langchain_local_HF_LLM.ipynb)
+- [notebooks/03_Option(1)_llama_index_with_NVIDIA_AI_endpoint.ipynb](https://github.com/NVIDIA/GenerativeAIExamples/blob/v0.7.0/notebooks/03_Option(1)_llama_index_with_NVIDIA_AI_endpoint.ipynb)
+- [notebooks/03_Option(2)_llama_index_with_HF_local_LLM.ipynb](https://github.com/NVIDIA/GenerativeAIExamples/blob/v0.7.0/notebooks/03_Option(2)_llama_index_with_HF_local_LLM.ipynb)
 
 ## [0.7.0] - 2024-06-18
 
 This release switches all examples to use cloud hosted GPU accelerated LLM and embedding models from [Nvidia API Catalog](https://build.nvidia.com) as default. It also deprecates support to deploy on-prem models using NeMo Inference Framework Container and adds support to deploy accelerated generative AI models across the cloud, data center, and workstation using [latest Nvidia NIM-LLM](https://docs.nvidia.com/nim/large-language-models/latest/introduction.html).
 
 ### New Features
-- Added model [auto download and caching support for `nemo-retriever-embedding-microservice` and `nemo-retriever-reranking-microservice`](./deploy/compose/docker-compose-nim-ms.yaml). Updated steps to deploy the services can be found [here](https://nvidia.github.io/GenerativeAIExamples/latest/nim-llms.html).
+
+- Added model auto download and caching support for `nemo-retriever-embedding-microservice` and `nemo-retriever-reranking-microservice` (see the [NIM microservices Docker Compose file](./deploy/compose/docker-compose-nim-ms.yaml)). Updated steps to deploy the services can be found in the [NIM-LLMs deployment guide](https://nvidia.github.io/GenerativeAIExamples/latest/nim-llms.html).
 - [Multimodal RAG Example enhancements](https://nvidia.github.io/GenerativeAIExamples/latest/multimodal-data.html)
   - Moved to the [PDF Plumber library](https://pypi.org/project/pdfplumber/) for parsing text and images.
   - Added `pgvector` vector DB support.
@@ -89,13 +90,12 @@ This release switches all examples to use cloud hosted GPU accelerated LLM and e
 - Updated base containers to use ubuntu 22.04 image `nvcr.io/nvidia/base/ubuntu:22.04_20240212`
 - Added `llama-index-readers-file` as dependency to avoid runtime package installation within chain server.
 
-
 ### Deprecated
+
 - Deprecated support of on-prem LLM model deployment using [NeMo Inference Framework Container](https://github.com/NVIDIA/GenerativeAIExamples/blob/v0.6.0/deploy/compose/rag-app-text-chatbot.yaml#L2). Developers can use [Nvidia NIM-LLM to deploy TensorRT optimized models on-prem and plug them in with existing examples](https://nvidia.github.io/GenerativeAIExamples/latest/nim-llms.html).
 - Deprecated [kubernetes operator support](https://github.com/NVIDIA/GenerativeAIExamples/tree/v0.6.0/deploy/k8s-operator/kube-trailblazer).
 - `nvolveqa_40k` embedding model was deprecated from [Nvidia API Catalog](https://build.nvidia.com). Updated all [notebooks](./notebooks/) and [experimental artifacts](./experimental/) to use [Nvidia embed-qa-4 model](https://build.nvidia.com/nvidia/embed-qa-4) instead.
 - Removed [notebooks numbered 00-04](https://github.com/NVIDIA/GenerativeAIExamples/tree/v0.6.0/notebooks), which used on-prem LLM model deployment using deprecated [NeMo Inference Framework Container](https://github.com/NVIDIA/GenerativeAIExamples/blob/v0.6.0/deploy/compose/rag-app-text-chatbot.yaml#L2).
-
 
 ## [0.6.0] - 2024-05-07
 
@@ -127,7 +127,6 @@ This release switches all examples to use cloud hosted GPU accelerated LLM and e
   - [Multiturn Chatbot](./RetrievalAugmentedGeneration/examples/multi_turn_rag/) now uses `ai-mixtral-8x7b-instruct` model for response generation.
   - [Structured data rag](./RetrievalAugmentedGeneration/examples/structured_data_rag/) now uses `ai-llama3-70b` for response and code generation.
 
-
 ## [0.5.0] - 2024-03-19
 
 This release completely refactors the directory structure of the repository for a more seamless and intuitive developer journey. It also adds support to deploy latest accelerated embedding and reranking models across the cloud, data center, and workstation using [NVIDIA NeMo Retriever NIM microservices](https://docs.nvidia.com/nim/index.html#nemo-retriever).
@@ -153,8 +152,7 @@ This release adds new dedicated RAG examples showcasing state of the art usecase
   - [NVIDIA Live FM Radio ASR RAG](./experimental/fm-asr-streaming-rag/)
 - [New dedicated notebook](./notebooks/10_RAG_for_HTML_docs_with_Langchain_NVIDIA_AI_Endpoints.ipynb) showcasing a RAG pipeline using web pages.
 
-
-### Changed
+### Changes
 
 - Switched from NVIDIA AI Foundation to [NVIDIA API Catalog endpoints](https://build.nvidia.com/explore/discover) for accessing cloud hosted LLM models.
 - Refactored [API schema of chain-server component](./docs/api_reference/openapi_schema.json) to support runtime allocation of llm parameters like temperature, max tokens, chat history etc.
@@ -164,11 +162,10 @@ This release adds new dedicated RAG examples showcasing state of the art usecase
 - Removed requirement of hardcoding `NVIDIA_API_KEY` in `compose.env` file.
 - Upgraded all python dependencies for chain-server and rag-playground services.
 
-### Fixed
+### Fixed Issues
 
 - Fixed a bug causing hallucinated answer when retriever fails to return any documents.
 - Fixed some accuracy issues for all the examples.
-
 
 ## [0.4.0] - 2024-02-23
 
@@ -178,7 +175,7 @@ This release adds new dedicated RAG examples showcasing state of the art usecase
 - Added support to provide example specific collection name for vector databases using an environment variable named `COLLECTION_NAME`.
 - Added `faiss` as a generic vector database solution behind `utils.py`.
 
-### Changed
+### Updates and Improvements
 
 - Upgraded and changed base containers for all components to pytorch `23.12-py3`.
 - Added langchain specific vector database connector in `utils.py`.
@@ -192,7 +189,7 @@ This release adds new dedicated RAG examples showcasing state of the art usecase
 
 ## [0.3.0] - 2024-01-22
 
-### Added
+### New Additions
 
 - [New dedicated example](./docs/rag/aiplayground.md) showcasing Nvidia AI Playground based models using Langchain connectors.
 - [New example](./RetrievalAugmentedGeneration/README.md#5-qa-chatbot-with-task-decomposition-example----a100h100l40s) demonstrating query decomposition.
@@ -201,7 +198,7 @@ This release adds new dedicated RAG examples showcasing state of the art usecase
 - New tool showcasing [RAG observability support.](./tools/observability/)
 - Support for on-prem deployment of [TRTLLM based nemotron models.](./RetrievalAugmentedGeneration/README.md#6-qa-chatbot----nemotron-model)
 
-### Changed
+### Updates
 
 - Upgraded Langchain and llamaindex dependencies for all container.
 - Restructured [README](./README.md) files for better intuitiveness.
@@ -212,10 +209,9 @@ This release adds new dedicated RAG examples showcasing state of the art usecase
 - Modified notebooks to use TRTLLM and Nvidia AI foundation based connectors from langchain.
 - Changed `ai-playground` model engine name to `nv-ai-foundation` in configurations.
 
-### Fixed
+### bug Fixes
 
 - [Fixed issue #19](https://github.com/NVIDIA/GenerativeAIExamples/issues/19)
-
 
 ## [0.2.0] - 2023-12-15
 

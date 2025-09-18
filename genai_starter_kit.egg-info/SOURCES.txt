@@ -1,0 +1,9 @@
+LICENSE.md
+README.md
+setup.py
+genai_starter_kit.egg-info/PKG-INFO
+genai_starter_kit.egg-info/SOURCES.txt
+genai_starter_kit.egg-info/dependency_links.txt
+genai_starter_kit.egg-info/entry_points.txt
+genai_starter_kit.egg-info/requires.txt
+genai_starter_kit.egg-info/top_level.txt

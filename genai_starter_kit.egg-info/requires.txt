@@ -1,0 +1,7 @@
+langchain
+openai
+pymilvus
+pymysql
+fastapi
+uvicorn
+pytest

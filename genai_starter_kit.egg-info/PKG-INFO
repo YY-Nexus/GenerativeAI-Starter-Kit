@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: genai-starter-kit
+Version: 0.1.0
+Summary: A starter kit for Generative AI applications, including RAG, LLM, vector DB, CLI, API, and more.
+Home-page: https://github.com/YY-Nexus/GenerativeAI-Starter-Kit
+Author: YY-Nexus
+Author-email: contact@yynexus.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+License-File: LICENSE.md
+Requires-Dist: langchain
+Requires-Dist: openai
+Requires-Dist: pymilvus
+Requires-Dist: pymysql
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: pytest
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
