@@ -27,10 +27,6 @@ jobs:
           pip install .[dev]
       - name: Run tests
         run: pytest --cov=.
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v4
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
 
   lint:
     runs-on: ubuntu-latest
@@ -131,23 +127,15 @@ jobs:
   notify:
     runs-on: ubuntu-latest
     needs: [test, lint, build-and-publish-pypi, build-and-push-docker]
+    if: always()
     steps:
-      - name: Send Slack notification
-        uses: rtCamp/action-slack-notify@v2
-        env:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-          SLACK_MESSAGE: "CI/CD流程已完成，详见GitHub Actions页面。"
-      - name: Send email notification
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: ${{ secrets.MAIL_SERVER }}
-          server_port: ${{ secrets.MAIL_PORT }}
-          username: ${{ secrets.MAIL_USERNAME }}
-          password: ${{ secrets.MAIL_PASSWORD }}
-          subject: "GenerativeAI-Starter-Kit CI/CD 完成通知"
-          to: ${{ secrets.MAIL_TO }}
-          from: ${{ secrets.MAIL_FROM }}
-          body: "CI/CD流程已完成，详见GitHub Actions页面。"
+      - name: CI/CD 完成通知
+        run: |
+          echo "CI/CD 流程已完成！"
+          echo "测试状态: ${{ needs.test.result }}"
+          echo "代码检查状态: ${{ needs.lint.result }}"
+          echo "PyPI 发布状态: ${{ needs.build-and-publish-pypi.result }}"
+          echo "Docker 发布状态: ${{ needs.build-and-push-docker.result }}"
 
 # Dependabot 自动依赖更新
 # 需在 .github/dependabot.yml 配置
