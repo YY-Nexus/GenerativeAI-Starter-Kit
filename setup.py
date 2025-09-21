@@ -2,18 +2,25 @@ from setuptools import setup, find_packages
 
 setup(
     name="genai-starter-kit",
-    version="0.1.0",
-    description="A comprehensive, beginner-friendly Generative AI development toolkit",
+    version="0.1.1",
+    description="🚀 A comprehensive, beginner-friendly Generative AI development toolkit with RAG, LLM, and multimodal capabilities",
     long_description=open("README.md", "r", encoding="utf-8").read(),
     long_description_content_type="text/markdown",
     author="YY-Nexus",
     author_email="contact@yynexus.com",
+    maintainer="YY-Nexus",
+    maintainer_email="contact@yynexus.com",
+    license="MIT",
     url="https://github.com/YY-Nexus/GenerativeAI-Starter-Kit",
+    download_url="https://github.com/YY-Nexus/GenerativeAI-Starter-Kit/archive/main.zip",
     project_urls={
-        "Bug Reports": "https://github.com/YY-Nexus/GenerativeAI-Starter-Kit/issues",
-        "Source": "https://github.com/YY-Nexus/GenerativeAI-Starter-Kit",
-        "Documentation": "https://yy-nexus.github.io/GenerativeAI-Starter-Kit/"
+        "Homepage": "https://github.com/YY-Nexus/GenerativeAI-Starter-Kit",
+        "Bug Reports": "https://github.com/YY-Nexus/GenerativeAI-Starter-Kit/issues", 
+        "Source Code": "https://github.com/YY-Nexus/GenerativeAI-Starter-Kit",
+        "Documentation": "https://yy-nexus.github.io/GenerativeAI-Starter-Kit/",
+        "Changelog": "https://github.com/YY-Nexus/GenerativeAI-Starter-Kit/blob/main/CHANGELOG.md"
     },
+    keywords="generative-ai, rag, llm, langchain, openai, milvus, fastapi, machine-learning, artificial-intelligence",
     packages=find_packages(),
     install_requires=[
         "langchain",
