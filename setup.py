@@ -3,10 +3,17 @@ from setuptools import setup, find_packages
 setup(
     name="genai-starter-kit",
     version="0.1.0",
-    description="A starter kit for Generative AI applications, including RAG, LLM, vector DB, CLI, API, and more.",
+    description="A comprehensive, beginner-friendly Generative AI development toolkit",
+    long_description=open("README.md", "r", encoding="utf-8").read(),
+    long_description_content_type="text/markdown",
     author="YY-Nexus",
     author_email="contact@yynexus.com",
     url="https://github.com/YY-Nexus/GenerativeAI-Starter-Kit",
+    project_urls={
+        "Bug Reports": "https://github.com/YY-Nexus/GenerativeAI-Starter-Kit/issues",
+        "Source": "https://github.com/YY-Nexus/GenerativeAI-Starter-Kit",
+        "Documentation": "https://yy-nexus.github.io/GenerativeAI-Starter-Kit/"
+    },
     packages=find_packages(),
     install_requires=[
         "langchain",
