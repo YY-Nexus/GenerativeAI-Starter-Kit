@@ -2,10 +2,10 @@
 
 🚀 **A comprehensive, beginner-friendly Generative AI development toolkit**
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)  
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)  
-[![CI/CD](https://github.com/YY-Nexus/GenerativeAI-Starter-Kit/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/YY-Nexus/GenerativeAI-Starter-Kit/actions/workflows/ci-cd.yml)  
-[![Docker Build](https://github.com/YY-Nexus/GenerativeAI-Starter-Kit/actions/workflows/docker-build.yml/badge.svg)](https://github.com/YY-Nexus/GenerativeAI-Starter-Kit/actions/workflows/docker-build.yml)  
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![CI/CD](https://github.com/YY-Nexus/GenerativeAI-Starter-Kit/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/YY-Nexus/GenerativeAI-Starter-Kit/actions/workflows/ci-cd.yml)
+[![Docker Build](https://github.com/YY-Nexus/GenerativeAI-Starter-Kit/actions/workflows/docker-build.yml/badge.svg)](https://github.com/YY-Nexus/GenerativeAI-Starter-Kit/actions/workflows/docker-build.yml)
 [![CodeQL](https://github.com/YY-Nexus/GenerativeAI-Starter-Kit/actions/workflows/codeql.yml/badge.svg)](https://github.com/YY-Nexus/GenerativeAI-Starter-Kit/actions/workflows/codeql.yml)
 
 Welcome to **GenerativeAI-Starter-Kit**! This repository provides everything you need to get started with Generative AI—from basic concepts to production-ready applications. Perfect for learning, rapid prototyping, and real-world deployment.
@@ -159,7 +159,7 @@ setup.py                      # Build configuration
 
 ---
 
-This project is committed to making generative AI development easy for everyone.  
+This project is committed to making generative AI development easy for everyone.
 **Join our community and start building today!**
 
 ---

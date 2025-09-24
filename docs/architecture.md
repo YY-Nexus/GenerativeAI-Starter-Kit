@@ -21,7 +21,7 @@ graph TD
     A --> C[retriever.py]
     D[multimodal.py] --> E[image_encoder.py]
     D --> F[text_encoder.py]
-    
+
 ## 🧩 技术栈
 
 - Python 3.11
