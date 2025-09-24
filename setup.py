@@ -1,14 +1,17 @@
 from setuptools import setup, find_packages
 import os
 
-# 读取依赖列表
 def load_requirements(filename):
     with open(filename, "r", encoding="utf-8") as f:
-        return [line.strip() for line in f if line.strip() and not line.startswith("#")]
+        return [
+            line.strip()
+            for line in f
+            if line.strip() and not line.startswith("#")
+        ]
 
 setup(
     name="genai-starter-kit",
-    version="0.1.1",
+    version="0.1.2",  # 自动更新建议见下方
     description="🚀 A comprehensive, beginner-friendly Generative AI development toolkit with RAG, LLM, and multimodal capabilities",
     long_description=open("README.md", "r", encoding="utf-8").read(),
     long_description_content_type="text/markdown",
@@ -32,7 +35,10 @@ setup(
         "fastapi", "machine-learning", "artificial-intelligence", "multimodal"
     ],
     packages=find_packages(),
-    install_requires=load_requirements("requirements.txt"),
+    install_requires=[
+        "numpy>=1.21.0,<2.0.0",  # ✅ 锁定兼容版本，避免构建失败
+        *load_requirements("requirements.txt")
+    ],
     extras_require={
         "rag": ["chromadb", "milvus"],
         "multimodal": ["transformers", "torch", "opencv-python"],
@@ -47,7 +53,8 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
         "Natural Language :: English",
-        "Natural Language :: Chinese (Simplified)"
+        "Natural Language :: Chinese (Simplified)",
+        "Framework :: FastAPI"
     ],
     entry_points={
         "console_scripts": [
