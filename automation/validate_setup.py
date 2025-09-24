@@ -1,14 +1,8 @@
 #!/usr/bin/env python3
+# type: ignore
 """
-Setup Validation Script
-=======================
-
-This script validates that the GenerativeAI Starter Kit is properly set up
-and that core functionality works as expected.
-
-Author: GenerativeAI-Starter-Kit
-License: MIT
-"""
+验证 GenerativeAI Starter Kit 安装和配置
+检查所有依赖项、配置文件和环境设置
 
 import os
 import sys

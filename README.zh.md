@@ -53,12 +53,15 @@ python automation/api_server.py
 运行核心示例
 
 # RAG 示例
+
 python examples/rag/simple_rag.py
 
 # 多模态 Web 应用
+
 python examples/multimodal/image_text_app.py --web
 
 # 微调示例
+
 python examples/fine-tuning/text_classification_tuning.py
 
 批量运行所有 Notebook

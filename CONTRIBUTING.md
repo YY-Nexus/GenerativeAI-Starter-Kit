@@ -11,7 +11,9 @@ We welcome contributions from the community to make this project even better. Wh
 1. **Fork the repository**
 
    ```bash
+
    # Fork on GitHub, then clone your fork
+
    git clone https://github.com/YOUR_USERNAME/GenerativeAI-Starter-Kit.git
    cd GenerativeAI-Starter-Kit
    ```
@@ -35,7 +37,9 @@ We welcome contributions from the community to make this project even better. Wh
 
    ```bash
    git checkout -b feature/your-feature-name
+
    # 或者
+
    git checkout -b fix/issue-description
    ```
 
@@ -47,13 +51,17 @@ We welcome contributions from the community to make this project even better. Wh
 3. **Test your changes**
 
    ```bash
+
    # Run specific tests
+
    python -m pytest tests/test_your_module.py -v
 
    # Run all tests
+
    ./automation/run_tests.sh
 
    # Test examples
+
    python examples/rag/simple_rag.py
    python examples/multimodal/image_text_app.py
    ```
@@ -159,7 +167,9 @@ class ExampleClass:
         Returns:
             Description of return value
         """
+
         # Implementation here
+
         return {"result": "example"}
 
 def demo_function():
@@ -234,25 +244,31 @@ class TestYourClass:
 ### **PR Template**
 
 ```markdown
+
 ## Description
+
 Brief description of changes
 
 ## Type of Change
+
 - [ ] Bug fix
 - [ ] New feature
 - [ ] Documentation update
 - [ ] Refactoring
 
 ## Testing
+
 - [ ] Tests pass locally
 - [ ] Added/updated tests
 - [ ] Examples work correctly
 
 ## Checklist
+
 - [ ] Code follows project style
 - [ ] Self-review completed
 - [ ] Documentation updated
 - [ ] No breaking changes (or clearly documented)
+
 ```
 
 ### **Review Process**

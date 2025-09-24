@@ -76,16 +76,21 @@ source venv/bin/activate
 ### 2️⃣ Try the Examples
 
 ```bash
+
 # RAG System Demo
+
 python examples/rag/simple_rag.py
 
 # Multimodal Web App
+
 python examples/multimodal/image_text_app.py --web
 
 # Fine-tuning Demo
+
 python examples/fine-tuning/text_classification_tuning.py
 
 # Start API Server
+
 python automation/api_server.py
 ```
 
@@ -160,6 +165,7 @@ setup.py                      # Build configuration
 ---
 
 This project is committed to making generative AI development easy for everyone.
+
 **Join our community and start building today!**
 
 ---

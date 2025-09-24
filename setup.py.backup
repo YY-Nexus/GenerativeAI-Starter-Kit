@@ -1,23 +1,29 @@
 from setuptools import setup, find_packages
-import os
 
 
-def load_requirements(filename):
-    with open(filename, "r", encoding="utf-8") as f:
-        return [line.strip() for line in f if line.strip() and not line.startswith("#")]
+# 注意：已移除 load_requirements 函数，直接列出核心依赖
 
+
+# 读取 README.md 作为长描述
+def get_long_description():
+    try:
+        with open("README.md", "r", encoding="utf-8") as f:
+            return f.read()
+    except FileNotFoundError:
+        return "A comprehensive Generative AI development toolkit with RAG, LLM, and multimodal capabilities."
 
 setup(
     name="genai-starter-kit",
-    version="0.1.2",  # 自动更新建议见下方
-    description="🚀 A comprehensive, beginner-friendly Generative AI development toolkit with RAG, LLM, and multimodal capabilities",
-    long_description=open("README.md", "r", encoding="utf-8").read(),
+    version="0.2.0",  # 版本升级，反映重大依赖清理
+    description="🚀 完整的生成式AI开发工具包，支持RAG、LLM和多模态AI功能",
+    long_description=get_long_description(),
     long_description_content_type="text/markdown",
     author="YY-Nexus",
     author_email="contact@yynexus.com",
     maintainer="YY-Nexus",
     maintainer_email="contact@yynexus.com",
     license="MIT",
+    license_files=["LICENSE.md"],
     url="https://github.com/YY-Nexus/GenerativeAI-Starter-Kit",
     download_url="https://github.com/YY-Nexus/GenerativeAI-Starter-Kit/archive/main.zip",
     project_urls={
@@ -32,18 +38,27 @@ setup(
         "generative-ai",
         "rag",
         "llm",
-        "langchain",
+        "transformers",
         "openai",
-        "milvus",
+        "pytorch",
         "fastapi",
         "machine-learning",
         "artificial-intelligence",
         "multimodal",
+        "deep-learning",
     ],
     packages=find_packages(),
     install_requires=[
-        "numpy>=1.21.0,<2.0.0",  # ✅ 锁定兼容版本，避免构建失败
-        *load_requirements("requirements.txt"),
+        # 核心依赖 - 已清理并验证
+        "torch>=2.8.0",
+        "transformers>=4.56.2",
+        "numpy>=2.3.3",
+        "fastapi>=0.117.1",
+        # 基础工具
+        "requests>=2.31.0",
+        "pyyaml>=6.0",
+        "pillow>=9.0.0",
+        # 注意：已移除 langchain 和 sentence-transformers 依赖
     ],
     extras_require={
         "rag": ["chromadb", "milvus"],
@@ -52,15 +67,46 @@ setup(
     },
     python_requires=">=3.8",
     classifiers=[
+        # 开发状态
         "Development Status :: 4 - Beta",
+        
+        # 目标受众
         "Intended Audience :: Developers",
+        "Intended Audience :: Science/Research",
+        "Intended Audience :: Education",
+        
+        # 主题
         "Topic :: Scientific/Engineering :: Artificial Intelligence",
-        "Programming Language :: Python :: 3.8",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+        "Topic :: Software Development :: Libraries :: Application Frameworks",
+        
+        # 许可证
         "License :: OSI Approved :: MIT License",
+        
+        # Python 版本支持
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        
+        # 操作系统
         "Operating System :: OS Independent",
+        "Operating System :: POSIX :: Linux",
+        "Operating System :: Microsoft :: Windows",
+        "Operating System :: MacOS",
+        
+        # 语言支持
         "Natural Language :: English",
         "Natural Language :: Chinese (Simplified)",
+        
+        # 框架
         "Framework :: FastAPI",
+        
+        # 环境
+        "Environment :: Console",
+        "Environment :: Web Environment",
     ],
     entry_points={
         "console_scripts": ["sync-docs=RAG.examples.basic_rag.langchain.sync_docs:main"]

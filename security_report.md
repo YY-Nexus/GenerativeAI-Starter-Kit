@@ -1,6 +1,6 @@
 # 🛡️ 安全漏洞修复报告
 
-**生成时间**: 2025-09-25 03:47:02
+**生成时间**: 2025-09-25 04:10:26
 
 ## 🔍 扫描工具
 
@@ -178,7 +178,11 @@
 
 ## 📊 Safety 扫描结果
 
-无可用的 Safety 扫描结果
+```json
+{
+  "vulnerabilities": []
+}
+```
 
 ## 📊 pip-audit 扫描结果
 
@@ -221,27 +225,27 @@
     },
     {
       "name": "anaconda-auth",
-      "version": "0.8.6",
+      "version": "0.9.0",
       "vulns": []
     },
     {
       "name": "anaconda-cli-base",
-      "version": "0.5.2",
+      "version": "0.5.3",
       "vulns": []
     },
     {
       "name": "annotated-types",
-      "version": "0.6.0",
+      "version": "0.7.0",
       "vulns": []
     },
     {
       "name": "anyio",
-      "version": "4.10.0",
+      "version": "4.11.0",
       "vulns": []
     },
     {
       "name": "archspec",
-      "version": "0.2.3",
+      "version": "0.2.5",
       "vulns": []
     },
     {
@@ -256,7 +260,7 @@
     },
     {
       "name": "billiard",
-      "version": "4.2.1",
+      "version": "4.2.2",
       "vulns": []
     },
     {
@@ -276,12 +280,12 @@
     },
     {
       "name": "boto3",
-      "version": "1.40.17",
+      "version": "1.40.38",
       "vulns": []
     },
     {
       "name": "botocore",
-      "version": "1.40.17",
+      "version": "1.40.38",
       "vulns": []
     },
     {
@@ -291,7 +295,7 @@
     },
     {
       "name": "brotlicffi",
-      "version": "1.0.9.2",
+      "version": "1.1.0.0",
       "vulns": []
     },
     {
@@ -316,17 +320,17 @@
     },
     {
       "name": "cffi",
-      "version": "1.17.1",
+      "version": "2.0.0",
       "vulns": []
     },
     {
       "name": "charset-normalizer",
-      "version": "3.3.2",
+      "version": "3.4.3",
       "vulns": []
     },
     {
       "name": "click",
-      "version": "8.2.1",
+      "version": "8.3.0",
       "vulns": []
     },
     {
@@ -381,7 +385,7 @@
     },
     {
       "name": "cryptography",
-      "version": "45.0.5",
+      "version": "46.0.1",
       "vulns": []
     },
     {
@@ -416,7 +420,7 @@
     },
     {
       "name": "fastapi",
-      "version": "0.116.1",
+      "version": "0.117.1",
       "vulns": []
     },
     {
@@ -426,7 +430,7 @@
     },
     {
       "name": "frozendict",
-      "version": "2.4.2",
+      "version": "2.4.6",
       "vulns": []
     },
     {
@@ -436,7 +440,7 @@
     },
     {
       "name": "fsspec",
-      "version": "2025.7.0",
+      "version": "2025.9.0",
       "vulns": []
     },
     {
@@ -446,7 +450,7 @@
     },
     {
       "name": "hf-xet",
-      "version": "1.1.9",
+      "version": "1.1.10",
       "vulns": []
     },
     {
@@ -461,7 +465,7 @@
     },
     {
       "name": "huggingface-hub",
-      "version": "0.34.4",
+      "version": "0.35.1",
       "vulns": []
     },
     {
@@ -471,7 +475,7 @@
     },
     {
       "name": "idna",
-      "version": "3.7",
+      "version": "3.10",
       "vulns": []
     },
     {
@@ -486,11 +490,12 @@
     },
     {
       "name": "jaraco-context",
-      "skip_reason": "Dependency not found on PyPI and could not be audited: jaraco-context (0.0.0)"
+      "version": "6.0.1",
+      "vulns": []
     },
     {
       "name": "jaraco-functools",
-      "version": "4.1.0",
+      "version": "4.3.0",
       "vulns": []
     },
     {
@@ -539,7 +544,7 @@
     },
     {
       "name": "markdown-it-py",
-      "version": "2.2.0",
+      "version": "4.0.0",
       "vulns": []
     },
     {
@@ -554,7 +559,7 @@
     },
     {
       "name": "mdurl",
-      "version": "0.1.0",
+      "version": "0.1.2",
       "vulns": []
     },
     {
@@ -563,7 +568,7 @@
     },
     {
       "name": "more-itertools",
-      "version": "10.3.0",
+      "version": "10.8.0",
       "vulns": []
     },
     {
@@ -588,7 +593,7 @@
     },
     {
       "name": "ngcsdk",
-      "version": "3.169.4",
+      "version": "4.3.0",
       "vulns": []
     },
     {
@@ -603,7 +608,7 @@
     },
     {
       "name": "numpy",
-      "version": "2.3.2",
+      "version": "2.3.3",
       "vulns": []
     },
     {
@@ -623,7 +628,7 @@
     },
     {
       "name": "pip",
-      "version": "25.1",
+      "version": "25.2",
       "vulns": []
     },
     {
@@ -648,12 +653,12 @@
     },
     {
       "name": "platformdirs",
-      "version": "4.3.7",
+      "version": "4.4.0",
       "vulns": []
     },
     {
       "name": "pluggy",
-      "version": "1.5.0",
+      "version": "1.6.0",
       "vulns": []
     },
     {
@@ -678,7 +683,7 @@
     },
     {
       "name": "psutil",
-      "version": "7.0.0",
+      "version": "7.1.0",
       "vulns": []
     },
     {
@@ -693,27 +698,27 @@
     },
     {
       "name": "pycparser",
-      "version": "2.21",
+      "version": "2.23",
       "vulns": []
     },
     {
       "name": "pydantic",
-      "version": "2.11.7",
+      "version": "2.11.9",
       "vulns": []
     },
     {
       "name": "pydantic-core",
-      "version": "2.33.2",
+      "version": "2.39.0",
       "vulns": []
     },
     {
       "name": "pydantic-settings",
-      "version": "2.6.1",
+      "version": "2.11.0",
       "vulns": []
     },
     {
       "name": "pygments",
-      "version": "2.19.1",
+      "version": "2.19.2",
       "vulns": []
     },
     {
@@ -738,7 +743,7 @@
     },
     {
       "name": "python-dotenv",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "vulns": []
     },
     {
@@ -753,7 +758,7 @@
     },
     {
       "name": "readchar",
-      "version": "4.0.5",
+      "version": "4.2.1",
       "vulns": []
     },
     {
@@ -763,12 +768,12 @@
     },
     {
       "name": "regex",
-      "version": "2025.7.34",
+      "version": "2025.9.18",
       "vulns": []
     },
     {
       "name": "requests",
-      "version": "2.32.4",
+      "version": "2.32.5",
       "vulns": []
     },
     {
@@ -783,7 +788,7 @@
     },
     {
       "name": "rich",
-      "version": "13.9.4",
+      "version": "14.1.0",
       "vulns": []
     },
     {
@@ -793,17 +798,17 @@
     },
     {
       "name": "ruamel-yaml",
-      "version": "0.18.10",
+      "version": "0.18.15",
       "vulns": []
     },
     {
       "name": "ruamel-yaml-clib",
-      "version": "0.2.12",
+      "version": "0.2.14",
       "vulns": []
     },
     {
       "name": "s3transfer",
-      "version": "0.13.1",
+      "version": "0.14.0",
       "vulns": []
     },
     {
@@ -823,12 +828,12 @@
     },
     {
       "name": "scipy",
-      "version": "1.16.1",
+      "version": "1.16.2",
       "vulns": []
     },
     {
       "name": "semver",
-      "version": "3.0.2",
+      "version": "3.0.4",
       "vulns": []
     },
     {
@@ -838,12 +843,12 @@
     },
     {
       "name": "setuptools",
-      "version": "78.1.1",
+      "version": "80.9.0",
       "vulns": []
     },
     {
       "name": "shellingham",
-      "version": "1.5.0",
+      "version": "1.5.4",
       "vulns": []
     },
     {
@@ -868,7 +873,7 @@
     },
     {
       "name": "starlette",
-      "version": "0.47.3",
+      "version": "0.48.0",
       "vulns": []
     },
     {
@@ -883,7 +888,7 @@
     },
     {
       "name": "tokenizers",
-      "version": "0.21.4",
+      "version": "0.22.1",
       "vulns": []
     },
     {
@@ -913,12 +918,12 @@
     },
     {
       "name": "transformers",
-      "version": "4.55.4",
+      "version": "4.56.2",
       "vulns": []
     },
     {
       "name": "truststore",
-      "version": "0.10.1",
+      "version": "0.10.4",
       "vulns": []
     },
     {
@@ -933,12 +938,12 @@
     },
     {
       "name": "typing-extensions",
-      "version": "4.12.2",
+      "version": "4.15.0",
       "vulns": []
     },
     {
       "name": "typing-inspection",
-      "version": "0.4.0",
+      "version": "0.4.1",
       "vulns": []
     },
     {
@@ -953,7 +958,7 @@
     },
     {
       "name": "uvicorn",
-      "version": "0.35.0",
+      "version": "0.37.0",
       "vulns": []
     },
     {
@@ -973,7 +978,7 @@
     },
     {
       "name": "wcwidth",
-      "version": "0.2.13",
+      "version": "0.2.14",
       "vulns": []
     },
     {
@@ -988,7 +993,7 @@
     },
     {
       "name": "zstandard",
-      "version": "0.23.0",
+      "version": "0.25.0",
       "vulns": []
     }
   ],

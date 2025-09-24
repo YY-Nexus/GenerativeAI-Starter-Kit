@@ -1,0 +1,97 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "genai-starter-kit"
+version = "0.2.0"
+description = "🚀 完整的生成式AI开发工具包，支持RAG、LLM和多模态AI功能"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "YY-Nexus", email = "contact@yynexus.com"}
+]
+maintainers = [
+    {name = "YY-Nexus", email = "contact@yynexus.com"}
+]
+keywords = [
+    "generative-ai",
+    "rag",
+    "llm",
+    "transformers",
+    "openai",
+    "pytorch",
+    "fastapi",
+    "machine-learning",
+    "artificial-intelligence",
+    "multimodal",
+    "deep-learning"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Education",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: MacOS",
+    "Natural Language :: English",
+    "Natural Language :: Chinese (Simplified)",
+    "Framework :: FastAPI",
+    "Environment :: Console",
+    "Environment :: Web Environment",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "torch>=2.8.0",
+    "transformers>=4.56.2",
+    "numpy>=2.3.3",
+    "fastapi>=0.117.1",
+    "requests>=2.31.0",
+    "pyyaml>=6.0",
+    "pillow>=9.0.0",
+]
+
+[project.optional-dependencies]
+rag = ["chromadb", "milvus"]
+multimodal = ["transformers", "torch", "opencv-python"]
+dev = ["black", "flake8", "pre-commit", "pytest", "twine", "build"]
+all = ["genai-starter-kit[rag,multimodal,dev]"]
+
+[project.urls]
+Homepage = "https://github.com/YY-Nexus/GenerativeAI-Starter-Kit"
+"Bug Reports" = "https://github.com/YY-Nexus/GenerativeAI-Starter-Kit/issues"
+"Source Code" = "https://github.com/YY-Nexus/GenerativeAI-Starter-Kit"
+Documentation = "https://yy-nexus.github.io/GenerativeAI-Starter-Kit/"
+"中文文档" = "https://github.com/YY-Nexus/GenerativeAI-Starter-Kit/blob/main/README.zh.md"
+Changelog = "https://github.com/YY-Nexus/GenerativeAI-Starter-Kit/blob/main/CHANGELOG.md"
+Repository = "https://github.com/YY-Nexus/GenerativeAI-Starter-Kit.git"
+"Download" = "https://github.com/YY-Nexus/GenerativeAI-Starter-Kit/archive/main.zip"
+
+[project.scripts]
+sync-docs = "RAG.examples.basic_rag.langchain.sync_docs:main"
+
+[tool.setuptools.packages.find]
+exclude = ["tests*", "docs*", "examples*"]
+
+[tool.setuptools.package-data]
+genai_starter_kit = ["configs/*.yaml", "assets/*.png", "docs/*.md"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = ["E203", "W503"]

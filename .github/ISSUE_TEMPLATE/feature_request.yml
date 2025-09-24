@@ -1,0 +1,131 @@
+name: 💡 功能请求
+description: 建议一个新功能或改进来帮助 genai-starter-kit 变得更好
+labels: ["enhancement", "需要分类"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢您的功能建议！我们重视每一个改进建议。
+        
+        在提交之前，请确保：
+        - 搜索过现有的 issues，确认这不是重复建议
+        - 查看过项目路线图，确认该功能不在开发计划中
+        - 考虑过这个功能对其他用户的价值
+  
+  - type: textarea
+    id: problem
+    attributes:
+      label: 问题描述
+      description: 您希望解决什么问题？描述您遇到的困难或不便之处
+      placeholder: |
+        我在使用 genai-starter-kit 时遇到了...
+        当前的解决方案不够理想，因为...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: solution
+    attributes:
+      label: 期望的解决方案
+      description: 您希望看到什么功能？详细描述您想要的解决方案
+      placeholder: |
+        我希望能够...
+        这个功能应该能够...
+        具体来说...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 考虑过的替代方案
+      description: 您是否考虑过其他解决方案？它们为什么不适合？
+      placeholder: |
+        我也考虑过...
+        但是这个方案不理想，因为...
+  
+  - type: dropdown
+    id: feature-type
+    attributes:
+      label: 功能类型
+      description: 这是什么类型的功能请求？
+      options:
+        - 新的 API 或方法
+        - 性能改进
+        - 用户体验改进
+        - 文档改进
+        - 示例或教程
+        - 集成新的模型或服务
+        - 配置和自定义选项
+        - 错误处理改进
+        - 其他
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 优先级
+      description: 您认为这个功能有多重要？
+      options:
+        - 高 - 阻碍我使用项目
+        - 中 - 会显著改善我的体验
+        - 低 - 有了更好，没有也可以
+    validations:
+      required: true
+  
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: 使用场景
+      description: 详细描述这个功能的使用场景和用例
+      placeholder: |
+        场景1: 当用户需要...时
+        场景2: 在...情况下
+        场景3: 对于...类型的应用
+  
+  - type: textarea
+    id: api-design
+    attributes:
+      label: API 设计建议（可选）
+      description: 如果您对API设计有想法，请分享您的建议
+      placeholder: |
+        # 建议的 API 设计
+        ```python
+        # 示例代码
+        from genai_starter_kit import NewFeature
+        
+        feature = NewFeature(config)
+        result = feature.do_something()
+        ```
+      render: markdown
+  
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 其他信息
+      description: 添加任何其他有关功能请求的信息
+      placeholder: |
+        - 相关的技术文档或研究
+        - 其他项目中类似功能的实现
+        - 可能的技术挑战
+        - 对现有代码的影响
+  
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 检查清单
+      description: 请确认您已经完成以下检查
+      options:
+        - label: 我已经搜索过现有的 issues，确认这不是重复建议
+          required: true
+        - label: 我已经查看过项目路线图和文档
+          required: true
+        - label: 我认为这个功能对其他用户也有价值
+          required: true
+        - label: 我愿意参与功能设计讨论（可选）
+          required: false
+        - label: 我愿意协助实现这个功能（可选）
+          required: false

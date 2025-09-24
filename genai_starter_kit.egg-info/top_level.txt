@@ -1,0 +1,6 @@
+RAG
+automation
+datasets
+notebooks
+scripts
+venv

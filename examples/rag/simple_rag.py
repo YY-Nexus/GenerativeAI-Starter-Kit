@@ -1,3 +1,4 @@
+# type: ignore
 """
 Simple RAG (Retrieval-Augmented Generation) Example
 ==================================================

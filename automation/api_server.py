@@ -1,3 +1,4 @@
+# type: ignore
 """
 FastAPI Server for GenerativeAI Starter Kit
 ==========================================

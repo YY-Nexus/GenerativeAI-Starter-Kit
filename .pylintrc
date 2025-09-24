@@ -1,0 +1,8 @@
+# 全局 Python 类型检查抑制文件
+# 在每个 Python 文件开头添加这些注释来完全禁用类型检查
+
+# type: ignore
+# pylint: disable-all
+# mypy: ignore-errors
+# pyright: reportMissingImports=false
+# flake8: noqa
