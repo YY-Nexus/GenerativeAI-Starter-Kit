@@ -4,7 +4,7 @@
 
 你看到的所有报错都是 **IDE 类型检查器警告**，不是真正的运行时错误：
 
-### 🔍 错误分类：
+### 🔍 错误分类
 1. **Import 错误**: `无法从源解析导入"requests"` - 这是 Pylance 无法找到包定义，但包已正确安装
 2. **类型注解错误**: `参数缺少类型批注` - 严格类型检查模式的警告
 3. **Secret 访问错误**: GitHub Actions 配置中的 secrets 访问警告
@@ -23,7 +23,7 @@
 
 ## 🚀 推荐使用方案
 
-### 日常使用（零错误版本）:
+### 日常使用（零错误版本）
 ```bash
 # 快速项目状态检查
 python scripts/zero_error_monitor.py
@@ -32,7 +32,7 @@ python scripts/zero_error_monitor.py
 python scripts/run_manager.py
 ```
 
-### 高级功能（忽略警告）:
+### 高级功能（忽略警告）
 ```bash
 # 详细反馈分析（忽略 IDE 警告，功能正常）
 python scripts/collect_feedback.py

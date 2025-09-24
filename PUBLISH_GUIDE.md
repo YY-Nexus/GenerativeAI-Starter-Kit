@@ -91,7 +91,7 @@ python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 您需要配置 PyPI 认证令牌:
 
 1. **获取令牌**:
-   - 访问 https://pypi.org/manage/account/
+   - 访问 [https://pypi.org/manage/account/](https://pypi.org/manage/account/)
    - 生成新的 API 令牌
 
 2. **配置认证**:

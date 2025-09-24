@@ -1,0 +1,28 @@
+# Docker 构建专用 - 精简依赖
+# =================================
+
+# 核心 Web 框架
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+pydantic>=2.5.0
+
+# 基础科学计算
+numpy>=1.24.0
+pandas>=2.0.0
+
+# HTTP 客户端
+requests>=2.31.0
+httpx>=0.25.0
+
+# 配置和环境
+python-dotenv>=1.0.0
+pyyaml>=6.0
+
+# 数据验证
+jsonschema>=4.20.0
+
+# 日志和监控
+structlog>=23.2.0
+
+# 文件处理
+aiofiles>=23.2.0

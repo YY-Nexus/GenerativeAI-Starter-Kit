@@ -9,23 +9,18 @@ WORKDIR /app
 
 # 安装系统依赖
 RUN apt-get update && apt-get install -y \
-    gcc \
-    g++ \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
-# 复制requirements文件
-COPY requirements.txt .
+# 复制精简的requirements文件
+COPY requirements-docker.txt .
 
 # 安装Python依赖
 RUN pip install --upgrade pip \
-    && pip install --no-cache-dir -r requirements.txt
+    && pip install --no-cache-dir -r requirements-docker.txt
 
 # 复制应用代码
 COPY . .
-
-# 安装应用
-RUN pip install -e .
 
 # 创建非root用户
 RUN useradd --create-home --shell /bin/bash app \
@@ -39,5 +34,5 @@ EXPOSE 8000
 HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
   CMD curl -f http://localhost:8000/ || exit 1
 
-# 启动命令 - 使用修复的API
+# 启动命令 - 使用FastAPI演示应用
 CMD ["python", "-m", "uvicorn", "docker_api:app", "--host", "0.0.0.0", "--port", "8000"]

@@ -155,7 +155,7 @@ bash publish.sh
 
 发布新版本后，请检查：
 
-1. **访问 PyPI 页面**: https://pypi.org/project/genai-starter-kit/
+1. **访问 PyPI 页面**: <https://pypi.org/project/genai-starter-kit/>
 2. **检查描述显示**: 应该显示完整的 README 内容
 3. **查看验证状态**: "未验证"警告应该减少或消失
 4. **测试安装**: `pip install genai-starter-kit==0.2.0`

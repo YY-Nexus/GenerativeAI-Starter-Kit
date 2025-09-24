@@ -153,13 +153,13 @@
 
 ### 可选优化
 
-2. **运行完整测试**:
+2.**运行完整测试**:
 
    ```bash
    python -m pytest tests/ -v
    ```
 
-3. **验证安全扫描**:
+3.**验证安全扫描**:
 
    ```bash
    ./scripts/fix_vulnerabilities.sh --scan-only

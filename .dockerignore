@@ -1,0 +1,75 @@
+# Docker build context忽略文件
+
+# Git相关
+.git/
+.gitignore
+
+# Python相关
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.pytest_cache/
+.coverage
+
+# IDE相关
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 日志文件
+*.log
+logs/
+
+# 临时文件
+tmp/
+temp/
+.tmp/
+
+# 构建产物
+dist/
+build/
+*.egg
+
+# 环境文件
+.env
+.env.local
+.env.production
+
+# 文档
+docs/
+*.md
+LICENSE*
+
+# 测试文件
+tests/
+test_*.py
+
+# Mac系统文件
+.DS_Store
+
+# 数据文件
+data/
+datasets/
+models/
+*.pkl
+*.bin
+
+# 监控和报告文件
+monitoring_data_*.json
+feedback_analysis_*.json
+*_REPORT.md
+*_GUIDE.md
+*_STATUS.md
+
+# 备份文件
+*.backup
+*.bak
+
+# 脚本文件（部署用）
+scripts/
+start_genai_kit_mac.sh
+docker_*.sh
