@@ -1,8 +1,8 @@
 # ===============================
 # 🔧 核心 AI/ML 库
 # ===============================
-torch>=2.8.0  # 深度学习框架，推荐稳定版本
-transformers>=4.56.2  # Hugging Face 模型库，与 torch 2.0.1 兼容
+torch==2.0.1                     # 深度学习框架，推荐稳定版本
+transformers==4.32.0            # Hugging Face 模型库，与 torch 2.0.1 兼容
 langchain==0.3.26               # LLM 应用框架，支持 RAG、代理等
 langchain-community>=0.0.20    # LangChain 社区扩展模块
 sentence-transformers==2.2.2   # 语义向量模型，兼容 transformers 4.32.0
@@ -21,7 +21,7 @@ diffusers>=0.21.0              # 文生图模型支持（如 Stable Diffusion）
 # 📊 数据处理与分析
 # ===============================
 pandas>=1.5.0                   # 表格数据处理
-numpy>=2.3.3  # 数值计算基础库
+numpy>=1.24.0                   # 数值计算基础库
 scikit-learn>=1.3.0            # 机器学习工具集
 matplotlib>=3.6.0              # 数据可视化
 seaborn>=0.12.0                # 高级统计图表
@@ -29,26 +29,26 @@ seaborn>=0.12.0                # 高级统计图表
 # ===============================
 # 📝 文本处理与 NLP
 # ===============================
-nltk>=3.9.1  # 英文自然语言处理工具
+nltk>=3.8                      # 英文自然语言处理工具
 spacy>=3.5.0                   # 高性能 NLP 框架
 jieba>=0.42.1                  # 中文分词工具
 
 # ===============================
 # 🌐 Web 框架与 API
 # ===============================
-fastapi>=0.117.1  # 高性能异步 API 框架
-uvicorn>=0.37.0  # FastAPI 的 ASGI 服务器
+fastapi>=0.100.0               # 高性能异步 API 框架
+uvicorn>=0.22.0                # FastAPI 的 ASGI 服务器
 streamlit>=1.25.0              # 数据应用快速原型工具
 gradio>=3.40.0                 # AI 模型 Web 接口构建工具
 
 # ===============================
 # ⚙️ 实用工具
 # ===============================
-python-dotenv>=1.1.1  # 环境变量管理
-tqdm>=4.67.1  # 进度条显示
-requests>=2.32.5  # HTTP 请求库
+python-dotenv>=1.0.0           # 环境变量管理
+tqdm>=4.65.0                   # 进度条显示
+requests>=2.31.0               # HTTP 请求库
 beautifulsoup4>=4.12.0         # HTML/XML 解析器
-pydantic>=2.11.9  # 数据验证与模型定义（FastAPI 依赖）
+pydantic>=2.0.0                # 数据验证与模型定义（FastAPI 依赖）
 
 # ===============================
 # 🧪 开发与调试工具
@@ -63,4 +63,4 @@ notebook>=6.5.0                # Jupyter 笔记本核心组件
 # 🧠 可选扩展模块
 # ===============================
 # openai>=1.0.0                # OpenAI API 接口（如 GPT）
-huggingface-hub>=0.35.1  # Hugging Face 模型与数据集管理
+huggingface-hub>=0.16.0        # Hugging Face 模型与数据集管理

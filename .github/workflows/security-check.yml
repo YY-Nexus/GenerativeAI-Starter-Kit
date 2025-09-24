@@ -1,0 +1,198 @@
+name: 🛡️ Security Vulnerability Check
+
+on:
+  schedule:
+    - cron: '0 2 * * 1'  # 每周一凌晨2点运行
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:  # 允许手动触发
+
+env:
+  PYTHON_VERSION: '3.11'
+
+jobs:
+  security-scan:
+    name: 🔍 Security Scan
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+      
+    steps:
+    - name: 📥 Checkout Code
+      uses: actions/checkout@v4
+      
+    - name: 🐍 Setup Python ${{ env.PYTHON_VERSION }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+        cache: 'pip'
+        
+    - name: 🔧 Install Dependencies
+      run: |
+        python -m pip install --upgrade pip setuptools wheel
+        pip install safety pip-audit
+        if [ -f requirements.txt ]; then
+          pip install -r requirements.txt
+        fi
+        
+    - name: 🛡️ Run Safety Scan
+      continue-on-error: true
+      run: |
+        safety scan --json --output safety_results.json || echo "Safety scan completed with issues"
+        
+    - name: 🔍 Run pip-audit Scan  
+      continue-on-error: true
+      run: |
+        pip-audit --format=json --output=pip_audit_results.json || echo "pip-audit scan completed"
+        
+    - name: 📋 Generate Security Report
+      run: |
+        python fix_vulnerabilities.py --report-only
+        
+    - name: 📤 Upload Security Reports
+      uses: actions/upload-artifact@v3
+      with:
+        name: security-reports-${{ github.sha }}
+        path: |
+          security_report.md
+          safety_results.json
+          pip_audit_results.json
+        retention-days: 30
+        
+    - name: 📊 Display Security Summary
+      run: |
+        echo "## 🛡️ Security Scan Summary" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        if [ -f "security_report.md" ]; then
+          echo "### 📋 Security Report Generated" >> $GITHUB_STEP_SUMMARY
+          echo "- Report available in artifacts" >> $GITHUB_STEP_SUMMARY
+          echo "- Check the uploaded artifacts for detailed analysis" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "### ❌ Security Report Generation Failed" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### 🔍 Scan Tools Used" >> $GITHUB_STEP_SUMMARY
+        echo "- Safety: Python security vulnerability scanner" >> $GITHUB_STEP_SUMMARY  
+        echo "- pip-audit: PyPI package auditing tool" >> $GITHUB_STEP_SUMMARY
+        
+  auto-fix:
+    name: 🔧 Auto Fix Vulnerabilities
+    runs-on: ubuntu-latest
+    needs: security-scan
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    permissions:
+      contents: write
+      pull-requests: write
+      
+    steps:
+    - name: 📥 Checkout Code
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: 🐍 Setup Python ${{ env.PYTHON_VERSION }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+        cache: 'pip'
+        
+    - name: 🔧 Install Dependencies and Security Tools
+      run: |
+        python -m pip install --upgrade pip setuptools wheel
+        pip install safety pip-audit
+        if [ -f requirements.txt ]; then
+          pip install -r requirements.txt
+        fi
+        
+    - name: 🛡️ Auto Fix Vulnerabilities
+      run: |
+        python fix_vulnerabilities.py --auto-fix
+        
+    - name: 📝 Check for Changes
+      id: changes
+      run: |
+        if git diff --quiet; then
+          echo "changes=false" >> $GITHUB_OUTPUT
+          echo "No changes detected"
+        else
+          echo "changes=true" >> $GITHUB_OUTPUT
+          echo "Changes detected"
+          git diff --name-only
+        fi
+        
+    - name: 🚀 Create Pull Request
+      if: steps.changes.outputs.changes == 'true'
+      uses: peter-evans/create-pull-request@v5
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        commit-message: |
+          🛡️ Fix security vulnerabilities
+          
+          - Updated vulnerable packages to secure versions
+          - Updated requirements.txt with latest secure versions
+          - Generated security report for review
+        title: "🛡️ Auto-fix security vulnerabilities"
+        body: |
+          ## 🛡️ Security Vulnerability Auto-Fix
+          
+          This PR was automatically generated to fix detected security vulnerabilities.
+          
+          ### 🔍 Changes Made
+          - ✅ Updated vulnerable packages to secure versions
+          - ✅ Updated `requirements.txt` with latest versions  
+          - ✅ Generated security report for review
+          
+          ### 🧪 Testing Required
+          Please test the application thoroughly before merging:
+          - [ ] Unit tests pass
+          - [ ] Integration tests pass  
+          - [ ] Manual testing completed
+          - [ ] Security report reviewed
+          
+          ### 📋 Security Report
+          The detailed security report is available in the artifacts of the workflow run.
+          
+          ### 🔄 Rollback Instructions
+          If issues arise after merging, you can rollback using the backup files:
+          ```bash
+          cp requirements.txt.backup requirements.txt
+          pip install -r requirements.txt
+          ```
+          
+          ---
+          🤖 This PR was created automatically by the Security Vulnerability Check workflow.
+        branch: security/auto-fix-vulnerabilities
+        delete-branch: true
+        labels: |
+          security
+          dependencies
+          automated
+        reviewers: |
+          ${{ github.repository_owner }}
+          
+    - name: 📊 Update Summary
+      if: steps.changes.outputs.changes == 'true'
+      run: |
+        echo "## 🛡️ Security Auto-Fix Complete" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### ✅ Actions Taken" >> $GITHUB_STEP_SUMMARY
+        echo "- Automatically fixed security vulnerabilities" >> $GITHUB_STEP_SUMMARY
+        echo "- Created pull request with fixes" >> $GITHUB_STEP_SUMMARY
+        echo "- Generated security report" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### 🔗 Next Steps" >> $GITHUB_STEP_SUMMARY
+        echo "- Review the created pull request" >> $GITHUB_STEP_SUMMARY
+        echo "- Run tests to verify compatibility" >> $GITHUB_STEP_SUMMARY
+        echo "- Merge after validation" >> $GITHUB_STEP_SUMMARY
+        
+    - name: 📊 No Changes Summary
+      if: steps.changes.outputs.changes == 'false'
+      run: |
+        echo "## ✅ No Security Issues Found" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY  
+        echo "All dependencies are up to date and secure!" >> $GITHUB_STEP_SUMMARY

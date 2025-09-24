@@ -1,0 +1,2667 @@
+
+
++===========================================================================================================================================================================================+
+
+
+DEPRECATED: this command (`check`) has been DEPRECATED, and will be unsupported beyond 01 June 2024.
+
+
+We highly encourage switching to the new `scan` command which is easier to use, more powerful, and can be set up to mimic the deprecated command if required.
+
+
++===========================================================================================================================================================================================+
+
+
+{
+    "report_meta": {
+        "scan_target": "environment",
+        "scanned": [
+            "/opt/miniconda3/lib/python3.13/lib-dynload",
+            "/opt/miniconda3/lib/python3.13/site-packages/setuptools/_vendor",
+            "/opt/miniconda3/bin",
+            "/opt/miniconda3/lib/python313.zip",
+            "/opt/miniconda3/lib/python3.13",
+            "/opt/miniconda3/lib/python3.13/site-packages"
+        ],
+        "scanned_full_path": [
+            "/opt/miniconda3/bin",
+            "/opt/miniconda3/lib/python313.zip",
+            "/opt/miniconda3/lib/python3.13",
+            "/opt/miniconda3/lib/python3.13/lib-dynload",
+            "/opt/miniconda3/lib/python3.13/site-packages",
+            "/opt/miniconda3/lib/python3.13/site-packages/setuptools/_vendor"
+        ],
+        "target_languages": [
+            "python"
+        ],
+        "policy_file": null,
+        "policy_file_source": "local",
+        "audit_and_monitor": false,
+        "api_key": false,
+        "account": "",
+        "local_database_path": null,
+        "safety_version": "3.6.2",
+        "timestamp": "2025-09-25 03:26:07",
+        "packages_found": 171,
+        "vulnerabilities_found": 0,
+        "vulnerabilities_ignored": 0,
+        "remediations_recommended": 0,
+        "telemetry": {
+            "safety_options": {
+                "json": {
+                    "--json": 1
+                }
+            },
+            "safety_version": "3.6.2",
+            "safety_source": "cli",
+            "os_type": "Darwin",
+            "os_release": "24.6.0",
+            "os_description": "macOS-15.6.1-arm64-arm-64bit-Mach-O",
+            "python_version": "3.13.5",
+            "safety_command": "check"
+        },
+        "git": {
+            "branch": "main",
+            "tag": "",
+            "commit": "4af749136e2717ce83aba0aff8266ec75dbf4b96",
+            "dirty": "False",
+            "origin": "https://github.com/YY-Nexus/GenerativeAI-Starter-Kit.git"
+        },
+        "project": null,
+        "json_version": "1.1",
+        "remediations_attempted": 0,
+        "remediations_completed": 0,
+        "remediation_mode": "NON_INTERACTIVE"
+    },
+    "scanned_packages": {
+        "markupsafe": {
+            "name": "markupsafe",
+            "version": "3.0.2",
+            "requirements": [
+                {
+                    "raw": "markupsafe==3.0.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "markupsafe",
+                    "specifier": "==3.0.2",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "pyjwt": {
+            "name": "pyjwt",
+            "version": "2.10.1",
+            "requirements": [
+                {
+                    "raw": "pyjwt==2.10.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pyjwt",
+                    "specifier": "==2.10.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "pysocks": {
+            "name": "pysocks",
+            "version": "1.7.1",
+            "requirements": [
+                {
+                    "raw": "pysocks==1.7.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pysocks",
+                    "specifier": "==1.7.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "pyyaml": {
+            "name": "pyyaml",
+            "version": "6.0.2",
+            "requirements": [
+                {
+                    "raw": "pyyaml==6.0.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pyyaml",
+                    "specifier": "==6.0.2",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "accelerate": {
+            "name": "accelerate",
+            "version": "1.10.1",
+            "requirements": [
+                {
+                    "raw": "accelerate==1.10.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "accelerate",
+                    "specifier": "==1.10.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "aiofiles": {
+            "name": "aiofiles",
+            "version": "24.1.0",
+            "requirements": [
+                {
+                    "raw": "aiofiles==24.1.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "aiofiles",
+                    "specifier": "==24.1.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "aiohappyeyeballs": {
+            "name": "aiohappyeyeballs",
+            "version": "2.6.1",
+            "requirements": [
+                {
+                    "raw": "aiohappyeyeballs==2.6.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "aiohappyeyeballs",
+                    "specifier": "==2.6.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "aiohttp": {
+            "name": "aiohttp",
+            "version": "3.12.15",
+            "requirements": [
+                {
+                    "raw": "aiohttp==3.12.15",
+                    "extras": [],
+                    "marker": null,
+                    "name": "aiohttp",
+                    "specifier": "==3.12.15",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "aiosignal": {
+            "name": "aiosignal",
+            "version": "1.4.0",
+            "requirements": [
+                {
+                    "raw": "aiosignal==1.4.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "aiosignal",
+                    "specifier": "==1.4.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "amqp": {
+            "name": "amqp",
+            "version": "5.3.1",
+            "requirements": [
+                {
+                    "raw": "amqp==5.3.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "amqp",
+                    "specifier": "==5.3.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "anaconda-anon-usage": {
+            "name": "anaconda-anon-usage",
+            "version": "0.7.2",
+            "requirements": [
+                {
+                    "raw": "anaconda-anon-usage==0.7.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "anaconda-anon-usage",
+                    "specifier": "==0.7.2",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "anaconda-auth": {
+            "name": "anaconda-auth",
+            "version": "0.8.6",
+            "requirements": [
+                {
+                    "raw": "anaconda-auth==0.8.6",
+                    "extras": [],
+                    "marker": null,
+                    "name": "anaconda-auth",
+                    "specifier": "==0.8.6",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "anaconda-cli-base": {
+            "name": "anaconda-cli-base",
+            "version": "0.5.2",
+            "requirements": [
+                {
+                    "raw": "anaconda-cli-base==0.5.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "anaconda-cli-base",
+                    "specifier": "==0.5.2",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "annotated-types": {
+            "name": "annotated-types",
+            "version": "0.6.0",
+            "requirements": [
+                {
+                    "raw": "annotated-types==0.6.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "annotated-types",
+                    "specifier": "==0.6.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "anyio": {
+            "name": "anyio",
+            "version": "4.10.0",
+            "requirements": [
+                {
+                    "raw": "anyio==4.10.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "anyio",
+                    "specifier": "==4.10.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "archspec": {
+            "name": "archspec",
+            "version": "0.2.3",
+            "requirements": [
+                {
+                    "raw": "archspec==0.2.3",
+                    "extras": [],
+                    "marker": null,
+                    "name": "archspec",
+                    "specifier": "==0.2.3",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "attrs": {
+            "name": "attrs",
+            "version": "25.3.0",
+            "requirements": [
+                {
+                    "raw": "attrs==25.3.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "attrs",
+                    "specifier": "==25.3.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "authlib": {
+            "name": "authlib",
+            "version": "1.6.4",
+            "requirements": [
+                {
+                    "raw": "authlib==1.6.4",
+                    "extras": [],
+                    "marker": null,
+                    "name": "authlib",
+                    "specifier": "==1.6.4",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "billiard": {
+            "name": "billiard",
+            "version": "4.2.1",
+            "requirements": [
+                {
+                    "raw": "billiard==4.2.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "billiard",
+                    "specifier": "==4.2.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "bitsandbytes": {
+            "name": "bitsandbytes",
+            "version": "0.42.0",
+            "requirements": [
+                {
+                    "raw": "bitsandbytes==0.42.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "bitsandbytes",
+                    "specifier": "==0.42.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "boltons": {
+            "name": "boltons",
+            "version": "25.0.0",
+            "requirements": [
+                {
+                    "raw": "boltons==25.0.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "boltons",
+                    "specifier": "==25.0.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "boolean-py": {
+            "name": "boolean-py",
+            "version": "5.0",
+            "requirements": [
+                {
+                    "raw": "boolean-py==5.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "boolean-py",
+                    "specifier": "==5.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "boto3": {
+            "name": "boto3",
+            "version": "1.40.17",
+            "requirements": [
+                {
+                    "raw": "boto3==1.40.17",
+                    "extras": [],
+                    "marker": null,
+                    "name": "boto3",
+                    "specifier": "==1.40.17",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "botocore": {
+            "name": "botocore",
+            "version": "1.40.17",
+            "requirements": [
+                {
+                    "raw": "botocore==1.40.17",
+                    "extras": [],
+                    "marker": null,
+                    "name": "botocore",
+                    "specifier": "==1.40.17",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "bracex": {
+            "name": "bracex",
+            "version": "2.6",
+            "requirements": [
+                {
+                    "raw": "bracex==2.6",
+                    "extras": [],
+                    "marker": null,
+                    "name": "bracex",
+                    "specifier": "==2.6",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "brotlicffi": {
+            "name": "brotlicffi",
+            "version": "1.0.9.2",
+            "requirements": [
+                {
+                    "raw": "brotlicffi==1.0.9.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "brotlicffi",
+                    "specifier": "==1.0.9.2",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "bump-my-version": {
+            "name": "bump-my-version",
+            "version": "1.2.3",
+            "requirements": [
+                {
+                    "raw": "bump-my-version==1.2.3",
+                    "extras": [],
+                    "marker": null,
+                    "name": "bump-my-version",
+                    "specifier": "==1.2.3",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "cachecontrol": {
+            "name": "cachecontrol",
+            "version": "0.14.3",
+            "requirements": [
+                {
+                    "raw": "cachecontrol==0.14.3",
+                    "extras": [],
+                    "marker": null,
+                    "name": "cachecontrol",
+                    "specifier": "==0.14.3",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "celery": {
+            "name": "celery",
+            "version": "5.5.3",
+            "requirements": [
+                {
+                    "raw": "celery==5.5.3",
+                    "extras": [],
+                    "marker": null,
+                    "name": "celery",
+                    "specifier": "==5.5.3",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "certifi": {
+            "name": "certifi",
+            "version": "2025.8.3",
+            "requirements": [
+                {
+                    "raw": "certifi==2025.8.3",
+                    "extras": [],
+                    "marker": null,
+                    "name": "certifi",
+                    "specifier": "==2025.8.3",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "cffi": {
+            "name": "cffi",
+            "version": "1.17.1",
+            "requirements": [
+                {
+                    "raw": "cffi==1.17.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "cffi",
+                    "specifier": "==1.17.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "charset-normalizer": {
+            "name": "charset-normalizer",
+            "version": "3.3.2",
+            "requirements": [
+                {
+                    "raw": "charset-normalizer==3.3.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "charset-normalizer",
+                    "specifier": "==3.3.2",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "click": {
+            "name": "click",
+            "version": "8.2.1",
+            "requirements": [
+                {
+                    "raw": "click==8.2.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "click",
+                    "specifier": "==8.2.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "click-didyoumean": {
+            "name": "click-didyoumean",
+            "version": "0.3.1",
+            "requirements": [
+                {
+                    "raw": "click-didyoumean==0.3.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "click-didyoumean",
+                    "specifier": "==0.3.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "click-plugins": {
+            "name": "click-plugins",
+            "version": "1.1.1.2",
+            "requirements": [
+                {
+                    "raw": "click-plugins==1.1.1.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "click-plugins",
+                    "specifier": "==1.1.1.2",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "click-repl": {
+            "name": "click-repl",
+            "version": "0.3.0",
+            "requirements": [
+                {
+                    "raw": "click-repl==0.3.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "click-repl",
+                    "specifier": "==0.3.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "colorama": {
+            "name": "colorama",
+            "version": "0.4.6",
+            "requirements": [
+                {
+                    "raw": "colorama==0.4.6",
+                    "extras": [],
+                    "marker": null,
+                    "name": "colorama",
+                    "specifier": "==0.4.6",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "conda": {
+            "name": "conda",
+            "version": "25.7.0",
+            "requirements": [
+                {
+                    "raw": "conda==25.7.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "conda",
+                    "specifier": "==25.7.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "conda-anaconda-telemetry": {
+            "name": "conda-anaconda-telemetry",
+            "version": "0.3.0",
+            "requirements": [
+                {
+                    "raw": "conda-anaconda-telemetry==0.3.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "conda-anaconda-telemetry",
+                    "specifier": "==0.3.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "conda-anaconda-tos": {
+            "name": "conda-anaconda-tos",
+            "version": "0.2.2",
+            "requirements": [
+                {
+                    "raw": "conda-anaconda-tos==0.2.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "conda-anaconda-tos",
+                    "specifier": "==0.2.2",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "conda-content-trust": {
+            "name": "conda-content-trust",
+            "version": "0.2.0",
+            "requirements": [
+                {
+                    "raw": "conda-content-trust==0.2.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "conda-content-trust",
+                    "specifier": "==0.2.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "conda-libmamba-solver": {
+            "name": "conda-libmamba-solver",
+            "version": "25.4.0",
+            "requirements": [
+                {
+                    "raw": "conda-libmamba-solver==25.4.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "conda-libmamba-solver",
+                    "specifier": "==25.4.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "conda-package-handling": {
+            "name": "conda-package-handling",
+            "version": "2.4.0",
+            "requirements": [
+                {
+                    "raw": "conda-package-handling==2.4.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "conda-package-handling",
+                    "specifier": "==2.4.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "conda-package-streaming": {
+            "name": "conda-package-streaming",
+            "version": "0.12.0",
+            "requirements": [
+                {
+                    "raw": "conda-package-streaming==0.12.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "conda-package-streaming",
+                    "specifier": "==0.12.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "cryptography": {
+            "name": "cryptography",
+            "version": "45.0.5",
+            "requirements": [
+                {
+                    "raw": "cryptography==45.0.5",
+                    "extras": [],
+                    "marker": null,
+                    "name": "cryptography",
+                    "specifier": "==45.0.5",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "cyclonedx-python-lib": {
+            "name": "cyclonedx-python-lib",
+            "version": "9.1.0",
+            "requirements": [
+                {
+                    "raw": "cyclonedx-python-lib==9.1.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "cyclonedx-python-lib",
+                    "specifier": "==9.1.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "defusedxml": {
+            "name": "defusedxml",
+            "version": "0.7.1",
+            "requirements": [
+                {
+                    "raw": "defusedxml==0.7.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "defusedxml",
+                    "specifier": "==0.7.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "distro": {
+            "name": "distro",
+            "version": "1.9.0",
+            "requirements": [
+                {
+                    "raw": "distro==1.9.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "distro",
+                    "specifier": "==1.9.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "docker": {
+            "name": "docker",
+            "version": "7.1.0",
+            "requirements": [
+                {
+                    "raw": "docker==7.1.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "docker",
+                    "specifier": "==7.1.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "docutils": {
+            "name": "docutils",
+            "version": "0.22.2",
+            "requirements": [
+                {
+                    "raw": "docutils==0.22.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "docutils",
+                    "specifier": "==0.22.2",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "dparse": {
+            "name": "dparse",
+            "version": "0.6.4",
+            "requirements": [
+                {
+                    "raw": "dparse==0.6.4",
+                    "extras": [],
+                    "marker": null,
+                    "name": "dparse",
+                    "specifier": "==0.6.4",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "fastapi": {
+            "name": "fastapi",
+            "version": "0.116.1",
+            "requirements": [
+                {
+                    "raw": "fastapi==0.116.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "fastapi",
+                    "specifier": "==0.116.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "filelock": {
+            "name": "filelock",
+            "version": "3.19.1",
+            "requirements": [
+                {
+                    "raw": "filelock==3.19.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "filelock",
+                    "specifier": "==3.19.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "frozendict": {
+            "name": "frozendict",
+            "version": "2.4.2",
+            "requirements": [
+                {
+                    "raw": "frozendict==2.4.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "frozendict",
+                    "specifier": "==2.4.2",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "frozenlist": {
+            "name": "frozenlist",
+            "version": "1.7.0",
+            "requirements": [
+                {
+                    "raw": "frozenlist==1.7.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "frozenlist",
+                    "specifier": "==1.7.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "fsspec": {
+            "name": "fsspec",
+            "version": "2025.7.0",
+            "requirements": [
+                {
+                    "raw": "fsspec==2025.7.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "fsspec",
+                    "specifier": "==2025.7.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "h11": {
+            "name": "h11",
+            "version": "0.16.0",
+            "requirements": [
+                {
+                    "raw": "h11==0.16.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "h11",
+                    "specifier": "==0.16.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "hf-xet": {
+            "name": "hf-xet",
+            "version": "1.1.9",
+            "requirements": [
+                {
+                    "raw": "hf-xet==1.1.9",
+                    "extras": [],
+                    "marker": null,
+                    "name": "hf-xet",
+                    "specifier": "==1.1.9",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "httpcore": {
+            "name": "httpcore",
+            "version": "1.0.9",
+            "requirements": [
+                {
+                    "raw": "httpcore==1.0.9",
+                    "extras": [],
+                    "marker": null,
+                    "name": "httpcore",
+                    "specifier": "==1.0.9",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "httpx": {
+            "name": "httpx",
+            "version": "0.28.1",
+            "requirements": [
+                {
+                    "raw": "httpx==0.28.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "httpx",
+                    "specifier": "==0.28.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "huggingface-hub": {
+            "name": "huggingface-hub",
+            "version": "0.34.4",
+            "requirements": [
+                {
+                    "raw": "huggingface-hub==0.34.4",
+                    "extras": [],
+                    "marker": null,
+                    "name": "huggingface-hub",
+                    "specifier": "==0.34.4",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "id": {
+            "name": "id",
+            "version": "1.5.0",
+            "requirements": [
+                {
+                    "raw": "id==1.5.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "id",
+                    "specifier": "==1.5.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "idna": {
+            "name": "idna",
+            "version": "3.7",
+            "requirements": [
+                {
+                    "raw": "idna==3.7",
+                    "extras": [],
+                    "marker": null,
+                    "name": "idna",
+                    "specifier": "==3.7",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "isodate": {
+            "name": "isodate",
+            "version": "0.7.2",
+            "requirements": [
+                {
+                    "raw": "isodate==0.7.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "isodate",
+                    "specifier": "==0.7.2",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "jaraco.context": {
+            "name": "jaraco.context",
+            "version": "0.0.0",
+            "requirements": [
+                {
+                    "raw": "jaraco.context==0.0.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "jaraco.context",
+                    "specifier": "==0.0.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "jaraco.functools": {
+            "name": "jaraco.functools",
+            "version": "4.1.0",
+            "requirements": [
+                {
+                    "raw": "jaraco.functools==4.1.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "jaraco.functools",
+                    "specifier": "==4.1.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "jaraco-classes": {
+            "name": "jaraco-classes",
+            "version": "3.4.0",
+            "requirements": [
+                {
+                    "raw": "jaraco-classes==3.4.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "jaraco-classes",
+                    "specifier": "==3.4.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "jinja2": {
+            "name": "jinja2",
+            "version": "3.1.6",
+            "requirements": [
+                {
+                    "raw": "jinja2==3.1.6",
+                    "extras": [],
+                    "marker": null,
+                    "name": "jinja2",
+                    "specifier": "==3.1.6",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "jmespath": {
+            "name": "jmespath",
+            "version": "1.0.1",
+            "requirements": [
+                {
+                    "raw": "jmespath==1.0.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "jmespath",
+                    "specifier": "==1.0.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "joblib": {
+            "name": "joblib",
+            "version": "1.5.2",
+            "requirements": [
+                {
+                    "raw": "joblib==1.5.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "joblib",
+                    "specifier": "==1.5.2",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "jsonpatch": {
+            "name": "jsonpatch",
+            "version": "1.33",
+            "requirements": [
+                {
+                    "raw": "jsonpatch==1.33",
+                    "extras": [],
+                    "marker": null,
+                    "name": "jsonpatch",
+                    "specifier": "==1.33",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "jsonpointer": {
+            "name": "jsonpointer",
+            "version": "3.0.0",
+            "requirements": [
+                {
+                    "raw": "jsonpointer==3.0.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "jsonpointer",
+                    "specifier": "==3.0.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "keyring": {
+            "name": "keyring",
+            "version": "25.6.0",
+            "requirements": [
+                {
+                    "raw": "keyring==25.6.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "keyring",
+                    "specifier": "==25.6.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "kombu": {
+            "name": "kombu",
+            "version": "5.5.4",
+            "requirements": [
+                {
+                    "raw": "kombu==5.5.4",
+                    "extras": [],
+                    "marker": null,
+                    "name": "kombu",
+                    "specifier": "==5.5.4",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "libmambapy": {
+            "name": "libmambapy",
+            "version": "2.0.5",
+            "requirements": [
+                {
+                    "raw": "libmambapy==2.0.5",
+                    "extras": [],
+                    "marker": null,
+                    "name": "libmambapy",
+                    "specifier": "==2.0.5",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "license-expression": {
+            "name": "license-expression",
+            "version": "30.4.4",
+            "requirements": [
+                {
+                    "raw": "license-expression==30.4.4",
+                    "extras": [],
+                    "marker": null,
+                    "name": "license-expression",
+                    "specifier": "==30.4.4",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "markdown-it-py": {
+            "name": "markdown-it-py",
+            "version": "2.2.0",
+            "requirements": [
+                {
+                    "raw": "markdown-it-py==2.2.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "markdown-it-py",
+                    "specifier": "==2.2.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "marshmallow": {
+            "name": "marshmallow",
+            "version": "4.0.1",
+            "requirements": [
+                {
+                    "raw": "marshmallow==4.0.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "marshmallow",
+                    "specifier": "==4.0.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "mdurl": {
+            "name": "mdurl",
+            "version": "0.1.0",
+            "requirements": [
+                {
+                    "raw": "mdurl==0.1.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "mdurl",
+                    "specifier": "==0.1.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "menuinst": {
+            "name": "menuinst",
+            "version": "2.3.1",
+            "requirements": [
+                {
+                    "raw": "menuinst==2.3.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "menuinst",
+                    "specifier": "==2.3.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "more-itertools": {
+            "name": "more-itertools",
+            "version": "10.3.0",
+            "requirements": [
+                {
+                    "raw": "more-itertools==10.3.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "more-itertools",
+                    "specifier": "==10.3.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "mpmath": {
+            "name": "mpmath",
+            "version": "1.3.0",
+            "requirements": [
+                {
+                    "raw": "mpmath==1.3.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "mpmath",
+                    "specifier": "==1.3.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "msgpack": {
+            "name": "msgpack",
+            "version": "1.1.1",
+            "requirements": [
+                {
+                    "raw": "msgpack==1.1.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "msgpack",
+                    "specifier": "==1.1.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "multidict": {
+            "name": "multidict",
+            "version": "6.6.4",
+            "requirements": [
+                {
+                    "raw": "multidict==6.6.4",
+                    "extras": [],
+                    "marker": null,
+                    "name": "multidict",
+                    "specifier": "==6.6.4",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "networkx": {
+            "name": "networkx",
+            "version": "3.5",
+            "requirements": [
+                {
+                    "raw": "networkx==3.5",
+                    "extras": [],
+                    "marker": null,
+                    "name": "networkx",
+                    "specifier": "==3.5",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "ngcsdk": {
+            "name": "ngcsdk",
+            "version": "3.169.4",
+            "requirements": [
+                {
+                    "raw": "ngcsdk==3.169.4",
+                    "extras": [],
+                    "marker": null,
+                    "name": "ngcsdk",
+                    "specifier": "==3.169.4",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "nh3": {
+            "name": "nh3",
+            "version": "0.3.0",
+            "requirements": [
+                {
+                    "raw": "nh3==0.3.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "nh3",
+                    "specifier": "==0.3.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "nltk": {
+            "name": "nltk",
+            "version": "3.9.1",
+            "requirements": [
+                {
+                    "raw": "nltk==3.9.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "nltk",
+                    "specifier": "==3.9.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "numpy": {
+            "name": "numpy",
+            "version": "2.3.2",
+            "requirements": [
+                {
+                    "raw": "numpy==2.3.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "numpy",
+                    "specifier": "==2.3.2",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "optimum": {
+            "name": "optimum",
+            "version": "1.27.0",
+            "requirements": [
+                {
+                    "raw": "optimum==1.27.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "optimum",
+                    "specifier": "==1.27.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "packageurl-python": {
+            "name": "packageurl-python",
+            "version": "0.17.5",
+            "requirements": [
+                {
+                    "raw": "packageurl-python==0.17.5",
+                    "extras": [],
+                    "marker": null,
+                    "name": "packageurl-python",
+                    "specifier": "==0.17.5",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "packaging": {
+            "name": "packaging",
+            "version": "25.0",
+            "requirements": [
+                {
+                    "raw": "packaging==25.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "packaging",
+                    "specifier": "==25.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "pip": {
+            "name": "pip",
+            "version": "25.1",
+            "requirements": [
+                {
+                    "raw": "pip==25.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pip",
+                    "specifier": "==25.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "pip-api": {
+            "name": "pip-api",
+            "version": "0.0.34",
+            "requirements": [
+                {
+                    "raw": "pip-api==0.0.34",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pip-api",
+                    "specifier": "==0.0.34",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "pip-audit": {
+            "name": "pip-audit",
+            "version": "2.9.0",
+            "requirements": [
+                {
+                    "raw": "pip-audit==2.9.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pip-audit",
+                    "specifier": "==2.9.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "pip-requirements-parser": {
+            "name": "pip-requirements-parser",
+            "version": "32.0.1",
+            "requirements": [
+                {
+                    "raw": "pip-requirements-parser==32.0.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pip-requirements-parser",
+                    "specifier": "==32.0.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "pkce": {
+            "name": "pkce",
+            "version": "1.0.3",
+            "requirements": [
+                {
+                    "raw": "pkce==1.0.3",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pkce",
+                    "specifier": "==1.0.3",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "platformdirs": {
+            "name": "platformdirs",
+            "version": "4.3.7",
+            "requirements": [
+                {
+                    "raw": "platformdirs==4.3.7",
+                    "extras": [],
+                    "marker": null,
+                    "name": "platformdirs",
+                    "specifier": "==4.3.7",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "pluggy": {
+            "name": "pluggy",
+            "version": "1.5.0",
+            "requirements": [
+                {
+                    "raw": "pluggy==1.5.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pluggy",
+                    "specifier": "==1.5.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "polling2": {
+            "name": "polling2",
+            "version": "0.5.0",
+            "requirements": [
+                {
+                    "raw": "polling2==0.5.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "polling2",
+                    "specifier": "==0.5.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "prettytable": {
+            "name": "prettytable",
+            "version": "3.16.0",
+            "requirements": [
+                {
+                    "raw": "prettytable==3.16.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "prettytable",
+                    "specifier": "==3.16.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "prompt-toolkit": {
+            "name": "prompt-toolkit",
+            "version": "3.0.52",
+            "requirements": [
+                {
+                    "raw": "prompt-toolkit==3.0.52",
+                    "extras": [],
+                    "marker": null,
+                    "name": "prompt-toolkit",
+                    "specifier": "==3.0.52",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "propcache": {
+            "name": "propcache",
+            "version": "0.3.2",
+            "requirements": [
+                {
+                    "raw": "propcache==0.3.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "propcache",
+                    "specifier": "==0.3.2",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "psutil": {
+            "name": "psutil",
+            "version": "7.0.0",
+            "requirements": [
+                {
+                    "raw": "psutil==7.0.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "psutil",
+                    "specifier": "==7.0.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "py-serializable": {
+            "name": "py-serializable",
+            "version": "2.1.0",
+            "requirements": [
+                {
+                    "raw": "py-serializable==2.1.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "py-serializable",
+                    "specifier": "==2.1.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "pycosat": {
+            "name": "pycosat",
+            "version": "0.6.6",
+            "requirements": [
+                {
+                    "raw": "pycosat==0.6.6",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pycosat",
+                    "specifier": "==0.6.6",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "pycparser": {
+            "name": "pycparser",
+            "version": "2.21",
+            "requirements": [
+                {
+                    "raw": "pycparser==2.21",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pycparser",
+                    "specifier": "==2.21",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "pydantic": {
+            "name": "pydantic",
+            "version": "2.11.7",
+            "requirements": [
+                {
+                    "raw": "pydantic==2.11.7",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pydantic",
+                    "specifier": "==2.11.7",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "pydantic-core": {
+            "name": "pydantic-core",
+            "version": "2.33.2",
+            "requirements": [
+                {
+                    "raw": "pydantic-core==2.33.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pydantic-core",
+                    "specifier": "==2.33.2",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "pydantic-settings": {
+            "name": "pydantic-settings",
+            "version": "2.6.1",
+            "requirements": [
+                {
+                    "raw": "pydantic-settings==2.6.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pydantic-settings",
+                    "specifier": "==2.6.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "pygments": {
+            "name": "pygments",
+            "version": "2.19.1",
+            "requirements": [
+                {
+                    "raw": "pygments==2.19.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pygments",
+                    "specifier": "==2.19.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "pyparsing": {
+            "name": "pyparsing",
+            "version": "3.2.5",
+            "requirements": [
+                {
+                    "raw": "pyparsing==3.2.5",
+                    "extras": [],
+                    "marker": null,
+                    "name": "pyparsing",
+                    "specifier": "==3.2.5",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "python-dateutil": {
+            "name": "python-dateutil",
+            "version": "2.9.0.post0",
+            "requirements": [
+                {
+                    "raw": "python-dateutil==2.9.0.post0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "python-dateutil",
+                    "specifier": "==2.9.0.post0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "python-dotenv": {
+            "name": "python-dotenv",
+            "version": "1.1.0",
+            "requirements": [
+                {
+                    "raw": "python-dotenv==1.1.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "python-dotenv",
+                    "specifier": "==1.1.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "questionary": {
+            "name": "questionary",
+            "version": "2.1.1",
+            "requirements": [
+                {
+                    "raw": "questionary==2.1.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "questionary",
+                    "specifier": "==2.1.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "readchar": {
+            "name": "readchar",
+            "version": "4.0.5",
+            "requirements": [
+                {
+                    "raw": "readchar==4.0.5",
+                    "extras": [],
+                    "marker": null,
+                    "name": "readchar",
+                    "specifier": "==4.0.5",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "readme-renderer": {
+            "name": "readme-renderer",
+            "version": "44.0",
+            "requirements": [
+                {
+                    "raw": "readme-renderer==44.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "readme-renderer",
+                    "specifier": "==44.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "regex": {
+            "name": "regex",
+            "version": "2025.7.34",
+            "requirements": [
+                {
+                    "raw": "regex==2025.7.34",
+                    "extras": [],
+                    "marker": null,
+                    "name": "regex",
+                    "specifier": "==2025.7.34",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "requests": {
+            "name": "requests",
+            "version": "2.32.4",
+            "requirements": [
+                {
+                    "raw": "requests==2.32.4",
+                    "extras": [],
+                    "marker": null,
+                    "name": "requests",
+                    "specifier": "==2.32.4",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "requests-toolbelt": {
+            "name": "requests-toolbelt",
+            "version": "1.0.0",
+            "requirements": [
+                {
+                    "raw": "requests-toolbelt==1.0.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "requests-toolbelt",
+                    "specifier": "==1.0.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "rfc3986": {
+            "name": "rfc3986",
+            "version": "2.0.0",
+            "requirements": [
+                {
+                    "raw": "rfc3986==2.0.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "rfc3986",
+                    "specifier": "==2.0.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "rich": {
+            "name": "rich",
+            "version": "13.9.4",
+            "requirements": [
+                {
+                    "raw": "rich==13.9.4",
+                    "extras": [],
+                    "marker": null,
+                    "name": "rich",
+                    "specifier": "==13.9.4",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "rich-click": {
+            "name": "rich-click",
+            "version": "1.9.1",
+            "requirements": [
+                {
+                    "raw": "rich-click==1.9.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "rich-click",
+                    "specifier": "==1.9.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "ruamel.yaml": {
+            "name": "ruamel.yaml",
+            "version": "0.18.10",
+            "requirements": [
+                {
+                    "raw": "ruamel.yaml==0.18.10",
+                    "extras": [],
+                    "marker": null,
+                    "name": "ruamel.yaml",
+                    "specifier": "==0.18.10",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "ruamel.yaml.clib": {
+            "name": "ruamel.yaml.clib",
+            "version": "0.2.12",
+            "requirements": [
+                {
+                    "raw": "ruamel.yaml.clib==0.2.12",
+                    "extras": [],
+                    "marker": null,
+                    "name": "ruamel.yaml.clib",
+                    "specifier": "==0.2.12",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "s3transfer": {
+            "name": "s3transfer",
+            "version": "0.13.1",
+            "requirements": [
+                {
+                    "raw": "s3transfer==0.13.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "s3transfer",
+                    "specifier": "==0.13.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "safetensors": {
+            "name": "safetensors",
+            "version": "0.6.2",
+            "requirements": [
+                {
+                    "raw": "safetensors==0.6.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "safetensors",
+                    "specifier": "==0.6.2",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "safety": {
+            "name": "safety",
+            "version": "3.6.2",
+            "requirements": [
+                {
+                    "raw": "safety==3.6.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "safety",
+                    "specifier": "==3.6.2",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "safety-schemas": {
+            "name": "safety-schemas",
+            "version": "0.0.16",
+            "requirements": [
+                {
+                    "raw": "safety-schemas==0.0.16",
+                    "extras": [],
+                    "marker": null,
+                    "name": "safety-schemas",
+                    "specifier": "==0.0.16",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "scipy": {
+            "name": "scipy",
+            "version": "1.16.1",
+            "requirements": [
+                {
+                    "raw": "scipy==1.16.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "scipy",
+                    "specifier": "==1.16.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "semver": {
+            "name": "semver",
+            "version": "3.0.2",
+            "requirements": [
+                {
+                    "raw": "semver==3.0.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "semver",
+                    "specifier": "==3.0.2",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "sentencepiece": {
+            "name": "sentencepiece",
+            "version": "0.2.1",
+            "requirements": [
+                {
+                    "raw": "sentencepiece==0.2.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "sentencepiece",
+                    "specifier": "==0.2.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "setuptools": {
+            "name": "setuptools",
+            "version": "78.1.1",
+            "requirements": [
+                {
+                    "raw": "setuptools==78.1.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "setuptools",
+                    "specifier": "==78.1.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "shellingham": {
+            "name": "shellingham",
+            "version": "1.5.0",
+            "requirements": [
+                {
+                    "raw": "shellingham==1.5.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "shellingham",
+                    "specifier": "==1.5.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "shortuuid": {
+            "name": "shortuuid",
+            "version": "1.0.13",
+            "requirements": [
+                {
+                    "raw": "shortuuid==1.0.13",
+                    "extras": [],
+                    "marker": null,
+                    "name": "shortuuid",
+                    "specifier": "==1.0.13",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "six": {
+            "name": "six",
+            "version": "1.17.0",
+            "requirements": [
+                {
+                    "raw": "six==1.17.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "six",
+                    "specifier": "==1.17.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "sniffio": {
+            "name": "sniffio",
+            "version": "1.3.1",
+            "requirements": [
+                {
+                    "raw": "sniffio==1.3.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "sniffio",
+                    "specifier": "==1.3.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "sortedcontainers": {
+            "name": "sortedcontainers",
+            "version": "2.4.0",
+            "requirements": [
+                {
+                    "raw": "sortedcontainers==2.4.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "sortedcontainers",
+                    "specifier": "==2.4.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "starlette": {
+            "name": "starlette",
+            "version": "0.47.3",
+            "requirements": [
+                {
+                    "raw": "starlette==0.47.3",
+                    "extras": [],
+                    "marker": null,
+                    "name": "starlette",
+                    "specifier": "==0.47.3",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "sympy": {
+            "name": "sympy",
+            "version": "1.14.0",
+            "requirements": [
+                {
+                    "raw": "sympy==1.14.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "sympy",
+                    "specifier": "==1.14.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "tenacity": {
+            "name": "tenacity",
+            "version": "9.1.2",
+            "requirements": [
+                {
+                    "raw": "tenacity==9.1.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "tenacity",
+                    "specifier": "==9.1.2",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "tokenizers": {
+            "name": "tokenizers",
+            "version": "0.21.4",
+            "requirements": [
+                {
+                    "raw": "tokenizers==0.21.4",
+                    "extras": [],
+                    "marker": null,
+                    "name": "tokenizers",
+                    "specifier": "==0.21.4",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "toml": {
+            "name": "toml",
+            "version": "0.10.2",
+            "requirements": [
+                {
+                    "raw": "toml==0.10.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "toml",
+                    "specifier": "==0.10.2",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "tomli": {
+            "name": "tomli",
+            "version": "2.2.1",
+            "requirements": [
+                {
+                    "raw": "tomli==2.2.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "tomli",
+                    "specifier": "==2.2.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "tomlkit": {
+            "name": "tomlkit",
+            "version": "0.13.3",
+            "requirements": [
+                {
+                    "raw": "tomlkit==0.13.3",
+                    "extras": [],
+                    "marker": null,
+                    "name": "tomlkit",
+                    "specifier": "==0.13.3",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "torch": {
+            "name": "torch",
+            "version": "2.8.0",
+            "requirements": [
+                {
+                    "raw": "torch==2.8.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "torch",
+                    "specifier": "==2.8.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "tqdm": {
+            "name": "tqdm",
+            "version": "4.67.1",
+            "requirements": [
+                {
+                    "raw": "tqdm==4.67.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "tqdm",
+                    "specifier": "==4.67.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "transformers": {
+            "name": "transformers",
+            "version": "4.55.4",
+            "requirements": [
+                {
+                    "raw": "transformers==4.55.4",
+                    "extras": [],
+                    "marker": null,
+                    "name": "transformers",
+                    "specifier": "==4.55.4",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "truststore": {
+            "name": "truststore",
+            "version": "0.10.1",
+            "requirements": [
+                {
+                    "raw": "truststore==0.10.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "truststore",
+                    "specifier": "==0.10.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "twine": {
+            "name": "twine",
+            "version": "6.2.0",
+            "requirements": [
+                {
+                    "raw": "twine==6.2.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "twine",
+                    "specifier": "==6.2.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "typer": {
+            "name": "typer",
+            "version": "0.19.2",
+            "requirements": [
+                {
+                    "raw": "typer==0.19.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "typer",
+                    "specifier": "==0.19.2",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "typing-extensions": {
+            "name": "typing-extensions",
+            "version": "4.12.2",
+            "requirements": [
+                {
+                    "raw": "typing-extensions==4.12.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "typing-extensions",
+                    "specifier": "==4.12.2",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "typing-inspection": {
+            "name": "typing-inspection",
+            "version": "0.4.0",
+            "requirements": [
+                {
+                    "raw": "typing-inspection==0.4.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "typing-inspection",
+                    "specifier": "==0.4.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "tzdata": {
+            "name": "tzdata",
+            "version": "2025.2",
+            "requirements": [
+                {
+                    "raw": "tzdata==2025.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "tzdata",
+                    "specifier": "==2025.2",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "urllib3": {
+            "name": "urllib3",
+            "version": "2.5.0",
+            "requirements": [
+                {
+                    "raw": "urllib3==2.5.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "urllib3",
+                    "specifier": "==2.5.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "uvicorn": {
+            "name": "uvicorn",
+            "version": "0.35.0",
+            "requirements": [
+                {
+                    "raw": "uvicorn==0.35.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "uvicorn",
+                    "specifier": "==0.35.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "validators": {
+            "name": "validators",
+            "version": "0.35.0",
+            "requirements": [
+                {
+                    "raw": "validators==0.35.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "validators",
+                    "specifier": "==0.35.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "vine": {
+            "name": "vine",
+            "version": "5.1.0",
+            "requirements": [
+                {
+                    "raw": "vine==5.1.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "vine",
+                    "specifier": "==5.1.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "wcmatch": {
+            "name": "wcmatch",
+            "version": "10.1",
+            "requirements": [
+                {
+                    "raw": "wcmatch==10.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "wcmatch",
+                    "specifier": "==10.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "wcwidth": {
+            "name": "wcwidth",
+            "version": "0.2.13",
+            "requirements": [
+                {
+                    "raw": "wcwidth==0.2.13",
+                    "extras": [],
+                    "marker": null,
+                    "name": "wcwidth",
+                    "specifier": "==0.2.13",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "wheel": {
+            "name": "wheel",
+            "version": "0.45.1",
+            "requirements": [
+                {
+                    "raw": "wheel==0.45.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "wheel",
+                    "specifier": "==0.45.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "yarl": {
+            "name": "yarl",
+            "version": "1.20.1",
+            "requirements": [
+                {
+                    "raw": "yarl==1.20.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "yarl",
+                    "specifier": "==1.20.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "zstandard": {
+            "name": "zstandard",
+            "version": "0.23.0",
+            "requirements": [
+                {
+                    "raw": "zstandard==0.23.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "zstandard",
+                    "specifier": "==0.23.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages"
+                }
+            ]
+        },
+        "autocommand": {
+            "name": "autocommand",
+            "version": "2.2.2",
+            "requirements": [
+                {
+                    "raw": "autocommand==2.2.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "autocommand",
+                    "specifier": "==2.2.2",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages/setuptools/_vendor"
+                }
+            ]
+        },
+        "backports.tarfile": {
+            "name": "backports.tarfile",
+            "version": "1.2.0",
+            "requirements": [
+                {
+                    "raw": "backports.tarfile==1.2.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "backports.tarfile",
+                    "specifier": "==1.2.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages/setuptools/_vendor"
+                }
+            ]
+        },
+        "importlib-metadata": {
+            "name": "importlib-metadata",
+            "version": "8.0.0",
+            "requirements": [
+                {
+                    "raw": "importlib-metadata==8.0.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "importlib-metadata",
+                    "specifier": "==8.0.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages/setuptools/_vendor"
+                }
+            ]
+        },
+        "inflect": {
+            "name": "inflect",
+            "version": "7.3.1",
+            "requirements": [
+                {
+                    "raw": "inflect==7.3.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "inflect",
+                    "specifier": "==7.3.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages/setuptools/_vendor"
+                }
+            ]
+        },
+        "jaraco.collections": {
+            "name": "jaraco.collections",
+            "version": "5.1.0",
+            "requirements": [
+                {
+                    "raw": "jaraco.collections==5.1.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "jaraco.collections",
+                    "specifier": "==5.1.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages/setuptools/_vendor"
+                }
+            ]
+        },
+        "jaraco.text": {
+            "name": "jaraco.text",
+            "version": "3.12.1",
+            "requirements": [
+                {
+                    "raw": "jaraco.text==3.12.1",
+                    "extras": [],
+                    "marker": null,
+                    "name": "jaraco.text",
+                    "specifier": "==3.12.1",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages/setuptools/_vendor"
+                }
+            ]
+        },
+        "typeguard": {
+            "name": "typeguard",
+            "version": "4.3.0",
+            "requirements": [
+                {
+                    "raw": "typeguard==4.3.0",
+                    "extras": [],
+                    "marker": null,
+                    "name": "typeguard",
+                    "specifier": "==4.3.0",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages/setuptools/_vendor"
+                }
+            ]
+        },
+        "zipp": {
+            "name": "zipp",
+            "version": "3.19.2",
+            "requirements": [
+                {
+                    "raw": "zipp==3.19.2",
+                    "extras": [],
+                    "marker": null,
+                    "name": "zipp",
+                    "specifier": "==3.19.2",
+                    "url": null,
+                    "found": "/opt/miniconda3/lib/python3.13/site-packages/setuptools/_vendor"
+                }
+            ]
+        }
+    },
+    "affected_packages": {},
+    "announcements": [],
+    "vulnerabilities": [],
+    "ignored_vulnerabilities": [],
+    "remediations": {},
+    "remediations_results": {
+        "vulnerabilities_fixed": [],
+        "remediations_applied": {},
+        "remediations_skipped": {}
+    }
+}
+
+
++===========================================================================================================================================================================================+
+
+
+DEPRECATED: this command (`check`) has been DEPRECATED, and will be unsupported beyond 01 June 2024.
+
+
+We highly encourage switching to the new `scan` command which is easier to use, more powerful, and can be set up to mimic the deprecated command if required.
+
+
++===========================================================================================================================================================================================+
+
+
