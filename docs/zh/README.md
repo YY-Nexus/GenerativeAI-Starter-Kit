@@ -117,11 +117,11 @@ models:
   embedding:
     name: "sentence-transformers/all-MiniLM-L6-v2"
     device: "cpu"
-  
+
 vector_db:
   type: "chroma"
   collection_name: "my_documents"
-  
+
 rag:
   chunk_size: 1000
   top_k: 5

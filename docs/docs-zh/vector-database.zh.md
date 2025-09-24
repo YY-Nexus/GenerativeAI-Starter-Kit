@@ -58,7 +58,7 @@ LangChain：FAISS、Milvus、pgvector
            devices:
              - driver: nvidia
                capabilities: ["gpu"]
-               device_ids: ['${VECTORSTORE_GPU_DEVICE_ID:-0}']  
+               device_ids: ['${VECTORSTORE_GPU_DEVICE_ID:-0}']
      profiles: ["nemo-retriever", "milvus", ""]
      ```
 

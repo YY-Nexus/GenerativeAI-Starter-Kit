@@ -49,10 +49,10 @@ We welcome contributions from the community to make this project even better. Wh
    ```bash
    # Run specific tests
    python -m pytest tests/test_your_module.py -v
-   
+
    # Run all tests
    ./automation/run_tests.sh
-   
+
    # Test examples
    python examples/rag/simple_rag.py
    python examples/multimodal/image_text_app.py
@@ -139,23 +139,23 @@ from typing import List, Dict, Any
 class ExampleClass:
     """
     Brief class description.
-    
+
     Args:
         param1: Description of parameter
         param2: Description of parameter
     """
-    
+
     def __init__(self, param1: str, param2: int = 10):
         self.param1 = param1
         self.param2 = param2
-    
+
     def example_method(self, input_data: List[str]) -> Dict[str, Any]:
         """
         Brief method description.
-        
+
         Args:
             input_data: Description of input
-            
+
         Returns:
             Description of return value
         """
@@ -184,12 +184,12 @@ class TestYourClass:
     @pytest.fixture
     def sample_instance(self):
         return YourClass(param="test")
-    
+
     def test_basic_functionality(self, sample_instance):
         result = sample_instance.method()
         assert result is not None
         assert isinstance(result, dict)
-    
+
     def test_error_handling(self, sample_instance):
         with pytest.raises(ValueError):
             sample_instance.method(invalid_input)
@@ -296,7 +296,7 @@ Brief description of changes
 ### **Community Guidelines**
 
 - 🤝 Be respectful and inclusive
-- 🎯 Stay on topic and constructive  
+- 🎯 Stay on topic and constructive
 - 📚 Help others learn and grow
 - 🌟 Celebrate contributions and progress
 

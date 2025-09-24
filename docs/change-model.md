@@ -79,4 +79,3 @@ You can determine the available model names using one of the following methods:
 * Run `ngc registry image list "nim/*"`.
 
 * Browse the NGC catalog at <https://catalog.ngc.nvidia.com/containers>.
-  

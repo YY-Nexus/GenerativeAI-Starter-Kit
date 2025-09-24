@@ -2,14 +2,24 @@ import pytest
 from unittest.mock import MagicMock
 from chains import DocumentSyncChain
 
+
 class DummyDoc:
     def __init__(self, doc_id):
-        self.metadata = {"id": doc_id, "title": f"Title {doc_id}", "source": "src", "tags": "tag"}
+        self.metadata = {
+            "id": doc_id,
+            "title": f"Title {doc_id}",
+            "source": "src",
+            "tags": "tag",
+        }
         self.page_content = f"Content for {doc_id}"
+
 
 def test_doc_id_uniqueness(monkeypatch):
     # 模拟 MySQL 已有 doc_id
-    chain = DocumentSyncChain({"collection_name": "test"}, {"host": "localhost", "user": "root", "password": "", "database": "test"})
+    chain = DocumentSyncChain(
+        {"collection_name": "test"},
+        {"host": "localhost", "user": "root", "password": "", "database": "test"},
+    )
     monkeypatch.setattr(chain, "get_existing_doc_ids", lambda: {"a", "b"})
     chain.vector_db = MagicMock()
     chain.save_metadata_to_mysql = MagicMock()
@@ -22,8 +32,12 @@ def test_doc_id_uniqueness(monkeypatch):
     # 只写入新文档元数据
     assert chain.save_metadata_to_mysql.call_count == 2
 
+
 def test_extract_metadata():
-    chain = DocumentSyncChain({"collection_name": "test"}, {"host": "localhost", "user": "root", "password": "", "database": "test"})
+    chain = DocumentSyncChain(
+        {"collection_name": "test"},
+        {"host": "localhost", "user": "root", "password": "", "database": "test"},
+    )
     doc = DummyDoc("x")
     meta = chain.extract_metadata(doc)
     assert meta["doc_id"] == "x"

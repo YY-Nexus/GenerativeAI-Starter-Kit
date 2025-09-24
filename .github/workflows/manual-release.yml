@@ -1,0 +1,47 @@
+name: Manual Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      bump_type:
+        description: 'Version bump type'
+        required: true
+        default: 'patch'
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.11"
+
+    - name: Install dependencies
+      run: |
+        pip install --upgrade pip
+        pip install bump-my-version
+        pip install -r requirements.txt
+
+    - name: Check dependency versions
+      run: python check-deps.py
+
+    - name: Bump version
+      run: bump-my-version ${{ github.event.inputs.bump_type }}
+
+    - name: Build package
+      run: python setup.py sdist bdist_wheel
+
+    - name: Publish to PyPI
+      uses: pypa/gh-action-pypi-publish@v1.8.10
+      with:
+        user: __token__
+        password: ${{ secrets.PYPI_API_TOKEN }}

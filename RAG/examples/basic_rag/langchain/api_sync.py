@@ -5,8 +5,16 @@ import os
 
 app = FastAPI()
 
+
 @app.post("/sync_doc/")
-def sync_doc(file: UploadFile = File(...), collection: str = Form("doc_vectors"), mysql_host: str = Form("127.0.0.1"), mysql_user: str = Form("root"), mysql_password: str = Form("yourpass"), mysql_db: str = Form("yyc3_GenerativeAI")):
+def sync_doc(
+    file: UploadFile = File(...),
+    collection: str = Form("doc_vectors"),
+    mysql_host: str = Form("127.0.0.1"),
+    mysql_user: str = Form("root"),
+    mysql_password: str = Form("yourpass"),
+    mysql_db: str = Form("yyc3_GenerativeAI"),
+):
     with tempfile.NamedTemporaryFile(delete=False) as tmp:
         tmp.write(file.file.read())
         tmp_path = tmp.name
@@ -15,7 +23,7 @@ def sync_doc(file: UploadFile = File(...), collection: str = Form("doc_vectors")
         "host": mysql_host,
         "user": mysql_user,
         "password": mysql_password,
-        "database": mysql_db
+        "database": mysql_db,
     }
     chain = DocumentSyncChain(vector_db_config, mysql_config)
     docs = ingest_docs(tmp_path)

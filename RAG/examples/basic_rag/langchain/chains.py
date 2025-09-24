@@ -3,10 +3,14 @@ from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import Milvus
 import pymysql
 
+
 class DocumentSyncChain:
     def __init__(self, vector_db_config, mysql_config):
         self.embeddings = OpenAIEmbeddings()
-        self.vector_db = Milvus(collection_name=vector_db_config["collection_name"], embedding_function=self.embeddings)
+        self.vector_db = Milvus(
+            collection_name=vector_db_config["collection_name"],
+            embedding_function=self.embeddings,
+        )
         self.mysql_config = mysql_config
 
     def get_existing_doc_ids(self):
@@ -18,7 +22,7 @@ class DocumentSyncChain:
             user=self.mysql_config["user"],
             password=self.mysql_config["password"],
             database=self.mysql_config["database"],
-            charset="utf8mb4"
+            charset="utf8mb4",
         )
         with conn.cursor() as cursor:
             cursor.execute("SELECT doc_id FROM documents")
@@ -29,7 +33,9 @@ class DocumentSyncChain:
     def process_and_store(self, documents):
         # 唯一性校验，避免重复写入
         existing_ids = self.get_existing_doc_ids()
-        new_docs = [doc for doc in documents if doc.metadata.get("id") not in existing_ids]
+        new_docs = [
+            doc for doc in documents if doc.metadata.get("id") not in existing_ids
+        ]
         # 向量数据库存储，返回 doc_id 与状态
         results = self.vector_db.add_documents(new_docs)
         # results 可为 List[dict]，如 {"doc_id": ..., "status": ...}
@@ -45,6 +51,7 @@ class DocumentSyncChain:
         """
         from langchain.chains.summarize import load_summarize_chain
         from langchain.chat_models import ChatOpenAI
+
         llm = ChatOpenAI(model_name=model_name)
         chain = load_summarize_chain(llm, chain_type="map_reduce")
         summary = chain.run(documents)
@@ -57,7 +64,7 @@ class DocumentSyncChain:
             "summary": getattr(doc, "page_content", str(doc))[:200],
             "source_path": doc.metadata.get("source", ""),
             "tags": doc.metadata.get("tags", ""),
-            "embedding_status": True
+            "embedding_status": True,
         }
 
     def save_metadata_to_mysql(self, meta):
@@ -66,7 +73,7 @@ class DocumentSyncChain:
             user=self.mysql_config["user"],
             password=self.mysql_config["password"],
             database=self.mysql_config["database"],
-            charset="utf8mb4"
+            charset="utf8mb4",
         )
         with conn.cursor() as cursor:
             sql = """
@@ -74,11 +81,20 @@ class DocumentSyncChain:
             VALUES (%s, %s, %s, %s, %s, %s)
             ON DUPLICATE KEY UPDATE title=VALUES(title), summary=VALUES(summary), source_path=VALUES(source_path), tags=VALUES(tags), embedding_status=VALUES(embedding_status)
             """
-            cursor.execute(sql, (
-                meta["doc_id"], meta["title"], meta["summary"], meta["source_path"], meta["tags"], meta["embedding_status"]
-            ))
+            cursor.execute(
+                sql,
+                (
+                    meta["doc_id"],
+                    meta["title"],
+                    meta["summary"],
+                    meta["source_path"],
+                    meta["tags"],
+                    meta["embedding_status"],
+                ),
+            )
         conn.commit()
         conn.close()
+
 
 # 用法示例：
 # vector_db_config = {"collection_name": "doc_vectors"}
@@ -96,6 +112,7 @@ from typing import List, Union
 import os
 
 SUPPORTED_EXTS = (".txt", ".pdf", ".md", ".ipynb")
+
 
 def ingest_docs(filepath: str) -> List[Document]:
     """
@@ -122,11 +139,13 @@ def ingest_docs(filepath: str) -> List[Document]:
 import threading
 import time
 
+
 def auto_sync_docs(directory: str, interval: int = 300):
     """
     自动同步目录下文档，定时扫描并更新知识库。
     interval: 扫描间隔（秒），默认5分钟。
     """
+
     def sync_loop():
         while True:
             for fname in os.listdir(directory):
@@ -138,8 +157,10 @@ def auto_sync_docs(directory: str, interval: int = 300):
                     except Exception as e:
                         print(f"同步失败: {fname}: {e}")
             time.sleep(interval)
+
     thread = threading.Thread(target=sync_loop, daemon=True)
     thread.start()
+
 
 def summarize_documents(documents: List[Document], max_length: int = 200) -> List[str]:
     """
@@ -148,10 +169,11 @@ def summarize_documents(documents: List[Document], max_length: int = 200) -> Lis
     """
     summaries: List[str] = []
     for doc in documents:
-        text = getattr(doc, 'page_content', str(doc))
+        text = getattr(doc, "page_content", str(doc))
         # 预留：可调用 LLM summarization API
         summaries.append(text[:max_length] + ("..." if len(text) > max_length else ""))
     return summaries
+
 
 def filter_documents(documents: List[Document], keywords: List[str]) -> List[Document]:
     """
@@ -159,10 +181,11 @@ def filter_documents(documents: List[Document], keywords: List[str]) -> List[Doc
     """
     filtered: List[Document] = []
     for doc in documents:
-        text = getattr(doc, 'page_content', str(doc))
+        text = getattr(doc, "page_content", str(doc))
         if any(kw in text for kw in keywords):
             filtered.append(doc)
     return filtered
+
 
 # === 向量化/LLM集成预留接口 ===
 def vectorize_documents(documents: List[Document]) -> List[Union[list, dict]]:
@@ -170,7 +193,8 @@ def vectorize_documents(documents: List[Document]) -> List[Union[list, dict]]:
     文档向量化处理（可集成 embedding/向量数据库）。
     """
     # 预留：可调用 embedding API 或本地模型
-    return [getattr(doc, 'page_content', str(doc)) for doc in documents]
+    return [getattr(doc, "page_content", str(doc)) for doc in documents]
+
 
 def llm_summarize(texts: List[str], model_name: str = "gpt-3.5-turbo") -> List[str]:
     """

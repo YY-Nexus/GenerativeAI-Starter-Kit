@@ -103,7 +103,7 @@ GenerativeAI-Starter-Kit/
 
 ### Model Fine-tuning
 - **Text Classification**: Sentiment analysis, topic classification
-- **Named Entity Recognition**: Extract entities from text  
+- **Named Entity Recognition**: Extract entities from text
 - **Question Answering**: Build custom Q&A systems
 - **Custom Tasks**: Adapt for your specific use cases
 
@@ -117,11 +117,11 @@ models:
   embedding:
     name: "sentence-transformers/all-MiniLM-L6-v2"
     device: "cpu"
-  
+
 vector_db:
   type: "chroma"
   collection_name: "my_documents"
-  
+
 rag:
   chunk_size: 1000
   top_k: 5
