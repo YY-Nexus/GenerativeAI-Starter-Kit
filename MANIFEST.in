@@ -1,0 +1,11 @@
+include README.md
+include README.zh.md
+include CHANGELOG.md
+include requirements.txt
+include setup.py
+
+recursive-include genai_starter_kit/configs *.yaml
+recursive-include genai_starter_kit/assets *.png
+recursive-include genai_starter_kit/docs *.md
+recursive-include genai_starter_kit/examples *.py
+recursive-include genai_starter_kit/tests *.py
