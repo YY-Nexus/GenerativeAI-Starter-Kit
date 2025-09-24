@@ -23,11 +23,10 @@ import argparse
 import json
 import subprocess
 import sys
-import os
 import re
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple, Any
+from typing import Dict, List, Optional, Any
 import shutil
 
 
@@ -58,11 +57,11 @@ class SecurityFixer:
         """检查必要工具是否安装"""
         self.log_info("检查安全扫描工具...")
         
-        tools_to_install = []
+        tools_to_install: List[str] = []
         
         # 检查 safety
         try:
-            import safety
+            import safety  # type: ignore
         except ImportError:
             tools_to_install.append("safety")
             
@@ -186,7 +185,7 @@ class SecurityFixer:
                 cmd = [sys.executable, "-m", "pip", "install", "--upgrade", package_name]
                 self.log_info(f"更新 {package_name} 到最新版本")
                 
-            result = subprocess.run(cmd, capture_output=True, text=True, check=True)
+            subprocess.run(cmd, capture_output=True, text=True, check=True)
             self.log_success(f"成功更新 {package_name}")
             return True
             
@@ -198,14 +197,14 @@ class SecurityFixer:
         """修复发现的漏洞"""
         self.log_info("开始修复安全漏洞...")
         
-        fixed_packages = []
-        failed_packages = []
+        fixed_packages: List[str] = []
+        failed_packages: List[str] = []
         
         # 处理 Safety 发现的漏洞
         if "vulnerabilities" in safety_results:
             for vuln in safety_results["vulnerabilities"]:
                 if isinstance(vuln, dict) and "package_name" in vuln:
-                    package_name = vuln["package_name"]
+                    package_name = str(vuln["package_name"])  # type: ignore
                     # 尝试更新到最新版本
                     if self.update_package(package_name):
                         fixed_packages.append(package_name)
@@ -216,13 +215,13 @@ class SecurityFixer:
         if "dependencies" in pip_audit_results:
             for dep in pip_audit_results["dependencies"]:
                 if isinstance(dep, dict) and "name" in dep:
-                    package_name = dep["name"]
+                    package_name = str(dep["name"])  # type: ignore
                     # 如果有推荐的安全版本，使用它
-                    target_version = None
+                    target_version: Optional[str] = None
                     if "vulnerabilities" in dep:
-                        for vuln in dep["vulnerabilities"]:
-                            if "fix_versions" in vuln and vuln["fix_versions"]:
-                                target_version = vuln["fix_versions"][0]
+                        for vuln in dep["vulnerabilities"]:  # type: ignore
+                            if isinstance(vuln, dict) and "fix_versions" in vuln and vuln["fix_versions"]:
+                                target_version = str(vuln["fix_versions"][0])  # type: ignore
                                 break
                                 
                     if self.update_package(package_name, target_version):
@@ -259,7 +258,7 @@ class SecurityFixer:
             with open(requirements_file, "r", encoding="utf-8") as f:
                 lines = f.readlines()
                 
-            updated_lines = []
+            updated_lines: List[str] = []
             
             for line in lines:
                 line = line.strip()
