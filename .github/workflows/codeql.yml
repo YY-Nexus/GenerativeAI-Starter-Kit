@@ -1,4 +1,4 @@
-name: "CodeQL Analysis"
+name: CodeQL Analysis
 
 on:
   push:
@@ -6,11 +6,10 @@ on:
   pull_request:
     branches: [ main ]
   schedule:
-    - cron: '0 0 * * 0'  # 每周运行一次
+    - cron: '0 0 * * 0'
 
 jobs:
   analyze:
-    name: Analyze (Python)
     runs-on: ubuntu-latest
     permissions:
       actions: read
@@ -23,7 +22,7 @@ jobs:
         language: [ python ]
 
     steps:
-    - name: Checkout repository
+    - name: Checkout
       uses: actions/checkout@v4
 
     - name: Initialize CodeQL
@@ -34,5 +33,5 @@ jobs:
     - name: Autobuild
       uses: github/codeql-action/autobuild@v3
 
-    - name: Perform CodeQL Analysis
+    - name: Analyze
       uses: github/codeql-action/analyze@v3
