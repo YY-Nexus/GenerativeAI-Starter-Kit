@@ -5,7 +5,7 @@ torch>=2.8.0  # 深度学习框架，推荐稳定版本
 transformers>=4.56.2  # Hugging Face 模型库，与 torch 2.0.1 兼容
 langchain==0.3.26               # LLM 应用框架，支持 RAG、代理等
 langchain-community>=0.0.20    # LangChain 社区扩展模块
-sentence-transformers==2.2.2   # 语义向量模型，兼容 transformers 4.32.0
+sentence-transformers==5.1.1   # 语义向量模型，兼容 transformers 4.32.0
 faiss-cpu>=1.7.0                # 向量检索库，CPU 版本
 chromadb>=0.4.0                 # 向量数据库，用于 RAG 系统
 
