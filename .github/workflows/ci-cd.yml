@@ -13,28 +13,33 @@ jobs:
   build-and-publish:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: "3.8"
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.8"
 
-    - name: Install dependencies
-      run: |
-        pip install --upgrade pip
-        pip install -r requirements.txt
+      - name: Upgrade build tools
+        run: pip install --upgrade pip setuptools wheel
 
-    - name: Run tests
-      run: pytest
+      - name: Install system dependencies
+        run: sudo apt-get update && sudo apt-get install -y build-essential libssl-dev
 
-    - name: Build package
-      run: python setup.py sdist bdist_wheel
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
 
-    - name: Publish to PyPI
-      if: github.ref == 'refs/heads/main'
-      uses: pypa/gh-action-pypi-publish@v1.8.10
-      with:
-        user: __token__
-        password: ${{ secrets.PYPI_API_TOKEN }}
+      - name: Run tests
+        run: pytest
+
+      - name: Build package
+        run: python setup.py sdist bdist_wheel
+
+      - name: Publish to PyPI
+        if: github.ref == 'refs/heads/main'
+        uses: pypa/gh-action-pypi-publish@v1.8.10
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
