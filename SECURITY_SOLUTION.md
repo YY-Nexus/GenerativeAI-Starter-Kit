@@ -46,7 +46,7 @@ python fix_vulnerabilities.py --auto-fix
 
 ### 方法二：安全检查模式
 
-```bash  
+```bash
 
 # 仅生成报告，不进行修复
 
@@ -86,7 +86,7 @@ python fix_vulnerabilities.py
 
 - ✅ **Safety扫描**：无已知漏洞
 
-- ✅ **pip-audit扫描**：无已知漏洞  
+- ✅ **pip-audit扫描**：无已知漏洞
 - ✅ **依赖状态**：大部分包都是最新版本
 
 GitHub 显示的 23 个漏洞可能来自：

@@ -12,6 +12,7 @@ def get_long_description():
     except FileNotFoundError:
         return "A comprehensive Generative AI development toolkit with RAG, LLM, and multimodal capabilities."
 
+
 setup(
     name="genai-starter-kit",
     version="0.2.0",  # 版本升级，反映重大依赖清理
@@ -69,20 +70,16 @@ setup(
     classifiers=[
         # 开发状态
         "Development Status :: 4 - Beta",
-        
         # 目标受众
         "Intended Audience :: Developers",
         "Intended Audience :: Science/Research",
         "Intended Audience :: Education",
-        
         # 主题
         "Topic :: Scientific/Engineering :: Artificial Intelligence",
         "Topic :: Software Development :: Libraries :: Python Modules",
         "Topic :: Software Development :: Libraries :: Application Frameworks",
-        
         # 许可证
         "License :: OSI Approved :: MIT License",
-        
         # Python 版本支持
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.8",
@@ -90,20 +87,16 @@ setup(
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
         "Programming Language :: Python :: 3.12",
-        
         # 操作系统
         "Operating System :: OS Independent",
         "Operating System :: POSIX :: Linux",
         "Operating System :: Microsoft :: Windows",
         "Operating System :: MacOS",
-        
         # 语言支持
         "Natural Language :: English",
         "Natural Language :: Chinese (Simplified)",
-        
         # 框架
         "Framework :: FastAPI",
-        
         # 环境
         "Environment :: Console",
         "Environment :: Web Environment",

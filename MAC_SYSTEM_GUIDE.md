@@ -49,7 +49,7 @@ python3 scripts/zero_error_monitor.py
 echo ""
 echo "🎯 可用工具:"
 echo "1. 项目监控: python3 scripts/zero_error_monitor.py"
-echo "2. 反馈检查: python3 scripts/quick_feedback_check.py"  
+echo "2. 反馈检查: python3 scripts/quick_feedback_check.py"
 echo "3. 脚本管理: python3 scripts/run_manager.py"
 echo "4. 文本分类: python3 examples/fine-tuning/text_classification_demo.py"
 
@@ -93,17 +93,17 @@ def send_mac_notification(title, message):
 
 def main():
     # 运行监控
-    result = subprocess.run(['python3', 'scripts/zero_error_monitor.py'], 
+    result = subprocess.run(['python3', 'scripts/zero_error_monitor.py'],
                           capture_output=True, text=True)
-    
+
     if result.returncode == 0:
         send_mac_notification(
-            "GenerativeAI-Starter-Kit", 
+            "GenerativeAI-Starter-Kit",
             "✅ 项目状态检查完成 - 一切正常!"
         )
     else:
         send_mac_notification(
-            "GenerativeAI-Starter-Kit", 
+            "GenerativeAI-Starter-Kit",
             "⚠️ 项目检查发现问题，请查看终端"
         )
 
@@ -136,7 +136,7 @@ def show_mac_style_status():
     """Mac风格的状态显示"""
     print("┌─────────────────────────────────────┐")
     print("│   🍎 GenerativeAI-Starter-Kit      │")
-    print("│   📦 版本: v0.2.0                   │") 
+    print("│   📦 版本: v0.2.0                   │")
     print("│   ✅ 状态: 完全就绪                  │")
     print("│   🔧 工具: 6个可用                   │")
     print("│   ❌ 错误: 0个                       │")

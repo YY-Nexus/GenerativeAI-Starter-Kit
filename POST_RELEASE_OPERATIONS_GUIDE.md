@@ -46,7 +46,7 @@ import matplotlib.pyplot as plt
 def get_download_stats():
     """获取下载统计"""
     package_name = "genai-starter-kit"
-    
+
     # 获取基本信息
     response = requests.get(f"https://pypi.org/pypi/{package_name}/json")
     if response.status_code == 200:
@@ -63,14 +63,14 @@ def create_monitoring_dashboard():
     """创建监控仪表板"""
     print("🔍 genai-starter-kit 包监控报告")
     print("=" * 50)
-    
+
     stats = get_download_stats()
     if stats:
         print(f"📦 包名: {stats['name']}")
         print(f"🔢 最新版本: {stats['version']}")
         print(f"📝 描述: {stats['description']}")
         print(f"📅 最后更新: {stats['last_updated']}")
-    
+
     print("\n📊 监控链接:")
     print("- PyPI 官方页面: https://pypi.org/project/genai-starter-kit/")
     print("- 下载统计: https://pypistats.org/packages/genai-starter-kit")
@@ -112,7 +112,7 @@ body:
     attributes:
       value: |
         感谢您花时间填写这个 bug 报告！
-  
+
   - type: input
     id: version
     attributes:
@@ -121,7 +121,7 @@ body:
       placeholder: "例如: 0.2.0"
     validations:
       required: true
-  
+
   - type: textarea
     id: what-happened
     attributes:
@@ -130,7 +130,7 @@ body:
       placeholder: 告诉我们您遇到了什么问题！
     validations:
       required: true
-  
+
   - type: textarea
     id: reproduction
     attributes:
@@ -154,7 +154,7 @@ body:
     attributes:
       value: |
         感谢您的功能建议！
-  
+
   - type: textarea
     id: problem
     attributes:
@@ -163,7 +163,7 @@ body:
       placeholder: 我遇到了这个问题...
     validations:
       required: true
-  
+
   - type: textarea
     id: solution
     attributes:
@@ -191,7 +191,7 @@ class FeedbackCollector:
         self.repo_owner = repo_owner
         self.repo_name = repo_name
         self.base_url = f"https://api.github.com/repos/{repo_owner}/{repo_name}"
-    
+
     def get_recent_issues(self, days=30):
         """获取最近的 issues"""
         since_date = (datetime.now() - timedelta(days=days)).isoformat()
@@ -202,34 +202,34 @@ class FeedbackCollector:
             'sort': 'created',
             'direction': 'desc'
         }
-        
+
         response = requests.get(url, params=params)
         if response.status_code == 200:
             return response.json()
         return []
-    
+
     def analyze_feedback(self):
         """分析反馈内容"""
         issues = self.get_recent_issues()
-        
+
         if not issues:
             print("📭 暂无新的反馈")
             return
-        
+
         print(f"📊 最近 30 天收到 {len(issues)} 个反馈")
         print("=" * 50)
-        
+
         # 按标签分类
         labels = []
         for issue in issues:
             for label in issue.get('labels', []):
                 labels.append(label['name'])
-        
+
         label_counts = Counter(labels)
         print("🏷️  反馈分类:")
         for label, count in label_counts.most_common():
             print(f"   {label}: {count}")
-        
+
         # 显示最新的几个反馈
         print("\n🔥 最新反馈:")
         for issue in issues[:5]:
@@ -364,33 +364,33 @@ class UserNeedsAnalyzer:
             'docs': ['documentation', 'example', 'tutorial', '文档', '示例'],
             'bugs': ['bug', 'error', 'issue', 'problem', '错误', '问题']
         }
-    
+
     def analyze_issue_content(self, text):
         """分析 issue 内容，识别用户需求"""
         needs = Counter()
         text_lower = text.lower()
-        
+
         for category, keywords in self.keywords.items():
             for keyword in keywords:
                 if keyword in text_lower:
                     needs[category] += 1
-        
+
         return needs
-    
+
     def generate_insights(self, issues_data):
         """生成用户需求洞察"""
         all_needs = Counter()
-        
+
         for issue in issues_data:
             title_body = f"{issue['title']} {issue.get('body', '')}"
             needs = self.analyze_issue_content(title_body)
             all_needs.update(needs)
-        
+
         print("🔍 用户需求分析结果:")
         print("=" * 40)
         for need, count in all_needs.most_common():
             print(f"{need}: {count} 次提及")
-        
+
         return all_needs
 
 if __name__ == "__main__":
@@ -511,31 +511,31 @@ class PromotionScheduler:
             'juejin': ['周三', '周六'],
             'twitter': ['每日']
         }
-    
+
     def generate_monthly_plan(self):
         """生成月度推广计划"""
         today = datetime.now()
         year, month = today.year, today.month
-        
+
         print(f"📅 {year}年{month}月推广计划")
         print("=" * 40)
-        
+
         # 获取该月的所有日期
         cal = calendar.monthcalendar(year, month)
-        
+
         for week in cal:
             for day in week:
                 if day == 0:  # 空日期
                     continue
-                
+
                 date = datetime(year, month, day)
                 weekday = date.strftime('%A')
                 weekday_zh = self.get_chinese_weekday(weekday)
-                
+
                 activities = self.get_daily_activities(weekday_zh)
                 if activities:
                     print(f"{month}/{day:02d} ({weekday_zh}): {', '.join(activities)}")
-    
+
     def get_chinese_weekday(self, english_day):
         """转换英文星期到中文"""
         mapping = {
@@ -544,7 +544,7 @@ class PromotionScheduler:
             'Sunday': '周日'
         }
         return mapping.get(english_day, english_day)
-    
+
     def get_daily_activities(self, weekday):
         """获取指定星期的推广活动"""
         activities = []
@@ -578,12 +578,12 @@ class PromotionTracker:
             'pypi_downloads': 0,
             'website_visits': 0
         }
-    
+
     def get_github_metrics(self):
         """获取 GitHub 指标"""
         repo_url = "https://api.github.com/repos/YY-Nexus/GenerativeAI-Starter-Kit"
         response = requests.get(repo_url)
-        
+
         if response.status_code == 200:
             data = response.json()
             return {
@@ -593,18 +593,18 @@ class PromotionTracker:
                 'issues': data['open_issues_count']
             }
         return {}
-    
+
     def generate_weekly_report(self):
         """生成周度推广报告"""
         print("📊 本周推广效果报告")
         print("=" * 40)
-        
+
         github_metrics = self.get_github_metrics()
         if github_metrics:
             print("GitHub 数据:")
             for key, value in github_metrics.items():
                 print(f"  {key}: {value}")
-        
+
         print("\n推广建议:")
         print("- 持续在技术社区分享有价值的内容")
         print("- 回应用户反馈，建立良好的社区关系")

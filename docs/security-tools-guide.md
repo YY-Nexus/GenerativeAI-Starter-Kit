@@ -130,24 +130,24 @@ on:
 jobs:
   security-check:
     runs-on: ubuntu-latest
-    
+
     steps:
     - uses: actions/checkout@v4
-    
+
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.11'
-        
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-        
+
     - name: Run security check
       run: |
         python fix_vulnerabilities.py --report-only
-        
+
     - name: Upload security report
       uses: actions/upload-artifact@v3
       with:
@@ -247,7 +247,7 @@ pip install --user safety pip-audit
 ## 📞 支持和贡献
 
 - 🐛 **报告问题**: 在 GitHub Issues 中报告问题
-- 💡 **功能请求**: 提交功能改进建议  
+- 💡 **功能请求**: 提交功能改进建议
 - 🤝 **贡献代码**: 欢迎提交 Pull Request
 
 ## 📜 许可证

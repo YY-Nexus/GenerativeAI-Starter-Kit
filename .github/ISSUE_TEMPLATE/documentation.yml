@@ -8,7 +8,7 @@ body:
     attributes:
       value: |
         感谢您帮助改进 genai-starter-kit 的文档！好的文档对项目至关重要。
-  
+
   - type: dropdown
     id: doc-type
     attributes:
@@ -25,14 +25,14 @@ body:
         - 其他
     validations:
       required: true
-  
+
   - type: input
     id: doc-location
     attributes:
       label: 文档位置
       description: 如果适用，请提供具体的文档位置（文件名、章节、链接等）
       placeholder: "例如: README.md 第3章节, docs/api.md"
-  
+
   - type: dropdown
     id: issue-type
     attributes:
@@ -48,7 +48,7 @@ body:
         - 翻译问题 - 中英文翻译不准确
     validations:
       required: true
-  
+
   - type: textarea
     id: current-content
     attributes:
@@ -58,7 +58,7 @@ body:
         当前文档中写的是：
         "..."
       render: markdown
-  
+
   - type: textarea
     id: problem-description
     attributes:
@@ -69,7 +69,7 @@ body:
         这让我感到困惑，因为...
     validations:
       required: true
-  
+
   - type: textarea
     id: suggested-improvement
     attributes:
@@ -81,7 +81,7 @@ body:
         应该更改为...
     validations:
       required: true
-  
+
   - type: textarea
     id: additional-examples
     attributes:
@@ -91,13 +91,13 @@ body:
         ```python
         # 建议添加的示例代码
         from genai_starter_kit import Example
-        
+
         example = Example()
         result = example.run()
         print(result)
         ```
       render: markdown
-  
+
   - type: textarea
     id: user-context
     attributes:
@@ -107,7 +107,7 @@ body:
         我是...（初学者/中级/高级开发者）
         我在尝试...
         我的使用场景是...
-  
+
   - type: dropdown
     id: urgency
     attributes:
@@ -119,7 +119,7 @@ body:
         - 低 - 小的改进建议
     validations:
       required: true
-  
+
   - type: checkboxes
     id: checklist
     attributes:

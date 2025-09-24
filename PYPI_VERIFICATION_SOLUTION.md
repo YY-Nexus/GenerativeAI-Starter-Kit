@@ -10,7 +10,7 @@
 - **原因**: README.md 中的 Markdown 格式在 PyPI 上解析有问题
 - **影响**: PyPI 无法正确显示项目的长描述
 
-### 2. ⚠️ **"未经验证的详细信息"**  
+### 2. ⚠️ **"未经验证的详细信息"**
 
 - **原因**: 缺少足够的项目元数据来通过 PyPI 自动验证
 - **影响**: 降低项目的可信度和专业度
@@ -38,7 +38,7 @@ classifiers=[
 
     "Development Status :: 4 - Beta",
 
-    # 目标受众  
+    # 目标受众
 
     "Intended Audience :: Developers",
     "Intended Audience :: Science/Research",
@@ -47,7 +47,7 @@ classifiers=[
     # 支持的 Python 版本
 
     "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9", 
+    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",

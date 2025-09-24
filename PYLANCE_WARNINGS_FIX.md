@@ -15,7 +15,7 @@
 ### 📊 **警告统计**
 
 - `reportUnusedImport`: 3 个警告
-- `reportUnknownVariableType`: 5 个警告  
+- `reportUnknownVariableType`: 5 个警告
 - `reportUnknownArgumentType`: 6 个警告
 - `reportMissingModuleSource`: 2 个警告
 - **总计**: 16 个 Pylance 警告
@@ -34,22 +34,22 @@
 ```python
 class TestSecurityToolsBasic(unittest.TestCase):
     """基础安全工具测试"""
-    
+
     def test_security_fixer_import(self):
         """测试安全修复工具导入"""
-        
+
     def test_security_scripts_executable(self):
         """测试安全脚本文件存在性"""
-        
+
     def test_requirements_readable(self):
         """测试配置文件可读性"""
-        
+
     def test_security_workflow_files(self):
         """测试工作流文件完整性"""
-        
+
     def test_basic_yaml_parsing(self):
         """测试 YAML 解析功能（可选）"""
-        
+
     def test_project_structure_integrity(self):
         """测试项目结构完整性"""
 ```
@@ -121,7 +121,7 @@ OK
 
 测试覆盖:
 ✅ SecurityFixer 导入测试
-✅ 安全脚本文件检查  
+✅ 安全脚本文件检查
 ✅ requirements.txt 可读性
 ✅ 工作流文件完整性
 ✅ YAML 解析功能 (可选)

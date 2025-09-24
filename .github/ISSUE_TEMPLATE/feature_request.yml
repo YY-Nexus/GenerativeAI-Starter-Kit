@@ -8,12 +8,12 @@ body:
     attributes:
       value: |
         感谢您的功能建议！我们重视每一个改进建议。
-        
+
         在提交之前，请确保：
         - 搜索过现有的 issues，确认这不是重复建议
         - 查看过项目路线图，确认该功能不在开发计划中
         - 考虑过这个功能对其他用户的价值
-  
+
   - type: textarea
     id: problem
     attributes:
@@ -24,7 +24,7 @@ body:
         当前的解决方案不够理想，因为...
     validations:
       required: true
-  
+
   - type: textarea
     id: solution
     attributes:
@@ -36,7 +36,7 @@ body:
         具体来说...
     validations:
       required: true
-  
+
   - type: textarea
     id: alternatives
     attributes:
@@ -45,7 +45,7 @@ body:
       placeholder: |
         我也考虑过...
         但是这个方案不理想，因为...
-  
+
   - type: dropdown
     id: feature-type
     attributes:
@@ -63,7 +63,7 @@ body:
         - 其他
     validations:
       required: true
-  
+
   - type: dropdown
     id: priority
     attributes:
@@ -75,7 +75,7 @@ body:
         - 低 - 有了更好，没有也可以
     validations:
       required: true
-  
+
   - type: textarea
     id: use-cases
     attributes:
@@ -85,7 +85,7 @@ body:
         场景1: 当用户需要...时
         场景2: 在...情况下
         场景3: 对于...类型的应用
-  
+
   - type: textarea
     id: api-design
     attributes:
@@ -96,12 +96,12 @@ body:
         ```python
         # 示例代码
         from genai_starter_kit import NewFeature
-        
+
         feature = NewFeature(config)
         result = feature.do_something()
         ```
       render: markdown
-  
+
   - type: textarea
     id: additional-context
     attributes:
@@ -112,7 +112,7 @@ body:
         - 其他项目中类似功能的实现
         - 可能的技术挑战
         - 对现有代码的影响
-  
+
   - type: checkboxes
     id: checklist
     attributes:

@@ -18,7 +18,7 @@ python3 scripts/zero_error_monitor.py
 echo ""
 echo "🎯 Mac专用快捷方式:"
 echo "1. 项目监控: python3 scripts/zero_error_monitor.py"
-echo "2. 反馈检查: python3 scripts/quick_feedback_check.py"  
+echo "2. 反馈检查: python3 scripts/quick_feedback_check.py"
 echo "3. 脚本管理: python3 scripts/run_manager.py"
 echo "4. 文本分类演示: python3 examples/fine-tuning/text_classification_demo.py"
 

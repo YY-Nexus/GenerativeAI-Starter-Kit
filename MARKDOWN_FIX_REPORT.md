@@ -51,7 +51,7 @@
 - 在标题前后添加适当空行
 - 修复 `MD022/blanks-around-headings` 错误
 
-### 3. 列表格式  
+### 3. 列表格式
 - 在列表前后添加空行
 - 修复 `MD032/blanks-around-lists` 错误
 

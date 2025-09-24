@@ -36,13 +36,13 @@ log_error() {
 # 检查依赖
 check_dependencies() {
     log "检查运行环境..."
-    
+
     # 检查 Python
     if ! command -v python3 &> /dev/null; then
         log_error "Python3 未安装"
         exit 1
     fi
-    
+
     # 检查必要的 Python 包
     python3 -c "import requests" 2>/dev/null || {
         log_warning "requests 包未安装，安装中..."
@@ -51,14 +51,14 @@ check_dependencies() {
             exit 1
         }
     }
-    
+
     log_success "环境检查完成"
 }
 
 # 更新项目统计
 update_project_stats() {
     log "更新项目统计数据..."
-    
+
     if [[ -f "$SCRIPT_DIR/monitor_downloads.py" ]]; then
         python3 "$SCRIPT_DIR/monitor_downloads.py" --save 2>&1 | tee -a "$LOG_FILE"
         log_success "下载统计更新完成"
@@ -70,7 +70,7 @@ update_project_stats() {
 # 收集用户反馈
 collect_user_feedback() {
     log "收集用户反馈..."
-    
+
     # 优先使用简化版本的反馈收集器
     if [[ -f "$SCRIPT_DIR/simple_feedback_collector.py" ]]; then
         python3 "$SCRIPT_DIR/simple_feedback_collector.py" --export 2>&1 | tee -a "$LOG_FILE" || true
@@ -87,7 +87,7 @@ collect_user_feedback() {
 # 生成推广计划
 generate_promotion_plan() {
     log "生成推广计划..."
-    
+
     if [[ -f "$SCRIPT_DIR/promotion_scheduler.py" ]]; then
         python3 "$SCRIPT_DIR/promotion_scheduler.py" plan 2>&1 | tee -a "$LOG_FILE"
         log_success "推广计划生成完成"
@@ -99,9 +99,9 @@ generate_promotion_plan() {
 # 检查 GitHub 状态
 check_github_status() {
     log "检查 GitHub 仓库状态..."
-    
+
     cd "$PROJECT_ROOT" || exit 1
-    
+
     # 检查是否有新的 issues
     if command -v gh &> /dev/null; then
         OPEN_ISSUES=$(gh issue list --state open --limit 1 --json number | jq '. | length')
@@ -110,7 +110,7 @@ check_github_status() {
         else
             log_success "没有开放的 issues"
         fi
-        
+
         # 检查是否有新的 PR
         OPEN_PRS=$(gh pr list --state open --limit 1 --json number | jq '. | length')
         if [[ "$OPEN_PRS" -gt 0 ]]; then
@@ -127,7 +127,7 @@ check_github_status() {
 # 安全检查
 security_check() {
     log "执行安全检查..."
-    
+
     if [[ -f "$PROJECT_ROOT/fix_vulnerabilities.py" ]]; then
         echo "n" | python3 "$PROJECT_ROOT/fix_vulnerabilities.py" 2>&1 | tee -a "$LOG_FILE" || true
         log_success "安全检查完成"
@@ -141,26 +141,26 @@ security_check() {
 # 清理旧文件
 cleanup_old_files() {
     log "清理旧的日志和临时文件..."
-    
+
     # 清理 7 天前的监控数据文件
     find "$SCRIPT_DIR" -name "monitoring_data_*.json" -mtime +7 -delete 2>/dev/null || true
     find "$SCRIPT_DIR" -name "feedback_analysis_*.json" -mtime +7 -delete 2>/dev/null || true
-    
+
     # 保留最近 30 天的日志
     if [[ -f "$LOG_FILE" ]]; then
         # 创建新的日志文件，只保留最近的内容
         tail -n 1000 "$LOG_FILE" > "${LOG_FILE}.tmp" && mv "${LOG_FILE}.tmp" "$LOG_FILE"
     fi
-    
+
     log_success "文件清理完成"
 }
 
 # 生成每日报告
 generate_daily_report() {
     log "生成每日运营报告..."
-    
+
     REPORT_FILE="$SCRIPT_DIR/daily_report_$(date +%Y%m%d).md"
-    
+
     cat > "$REPORT_FILE" << EOF
 # 每日运营报告 - $(date '+%Y年%m月%d日')
 
@@ -216,7 +216,7 @@ generate_daily_report() {
 - 准备技术内容
 
 ---
-*报告生成时间: $(date)*  
+*报告生成时间: $(date)*
 *下次运行: $(date -v+1d '+%Y-%m-%d %H:%M:%S')*
 EOF
 
@@ -226,18 +226,18 @@ EOF
 # 发送通知 (可选)
 send_notification() {
     log "发送运营通知..."
-    
+
     # 这里可以集成各种通知方式:
     # - 邮件通知
     # - Slack 通知
     # - 微信通知
     # - 钉钉通知
-    
+
     # 示例: 简单的桌面通知 (macOS)
     if command -v osascript &> /dev/null; then
         osascript -e 'display notification "每日运营检查完成" with title "genai-starter-kit"' 2>/dev/null || true
     fi
-    
+
     log_success "通知发送完成"
 }
 
@@ -247,13 +247,13 @@ main() {
     echo "=================================="
     echo "开始时间: $(date)"
     echo
-    
+
     # 创建日志目录
     mkdir -p "$(dirname "$LOG_FILE")"
-    
+
     # 记录开始
     log "开始每日运营检查..."
-    
+
     # 执行各项检查
     check_dependencies
     update_project_stats
@@ -264,7 +264,7 @@ main() {
     cleanup_old_files
     generate_daily_report
     send_notification
-    
+
     log_success "每日运营检查完成！"
     echo
     echo "📊 查看详细日志: $LOG_FILE"

@@ -27,13 +27,13 @@ except ImportError as e:
 
 class TestSecurityFixer(unittest.TestCase):
     """安全修复器测试类"""
-    
+
     def setUp(self):
         """测试前准备"""
         # 创建临时目录用于测试
         self.test_dir = tempfile.mkdtemp()
         self.test_project = Path(self.test_dir)
-        
+
         # 创建模拟的 requirements.txt
         self.requirements_file = self.test_project / "requirements.txt"
         with open(self.requirements_file, "w") as f:
@@ -44,48 +44,48 @@ numpy>=1.20.0
 pandas==1.3.0  # with comment
 flask
 """)
-        
+
         # 创建 SecurityFixer 实例
         self.fixer = SecurityFixer(str(self.test_project))
-    
+
     def tearDown(self):
         """测试后清理"""
         shutil.rmtree(self.test_dir)
-    
+
     def test_init(self):
         """测试初始化"""
         self.assertEqual(self.fixer.project_root, self.test_project)
         self.assertEqual(len(self.fixer.backup_file_paths), 0)
-    
+
     def test_backup_files(self):
         """测试文件备份功能"""
         # 执行备份
         self.fixer.backup_files()
-        
+
         # 检查备份文件是否创建
         backup_file = self.test_project / "requirements.txt.backup"
         self.assertTrue(backup_file.exists())
-        
+
         # 检查备份内容是否正确
         with open(backup_file, "r") as f:
             backup_content = f.read()
-        
+
         with open(self.requirements_file, "r") as f:
             original_content = f.read()
-        
+
         self.assertEqual(backup_content, original_content)
-        
+
         # 检查备份文件路径记录
         self.assertEqual(len(self.fixer.backup_file_paths), 1)
         self.assertEqual(self.fixer.backup_file_paths[0], backup_file)
-    
+
     def test_check_tools_basic(self):
         """测试工具检查功能（基础测试）"""
         # 这个测试不依赖实际安装的工具
         result = self.fixer.check_tools()
         # 由于在测试环境中工具可能未安装，我们只检查返回类型
         self.assertIsInstance(result, bool)
-    
+
     def test_scan_results_parsing(self):
         """测试扫描结果解析"""
         # 模拟 pip-audit 结果
@@ -98,40 +98,40 @@ flask
                 }
             ]
         }
-        
+
         # 模拟 safety 结果
         mock_safety = {
             "vulnerabilities": []
         }
-        
+
         # 测试修复功能不会崩溃
         fix_results = self.fixer.fix_vulnerabilities(mock_safety, mock_pip_audit)
-        
+
         # 检查返回结果格式
         self.assertIsInstance(fix_results, dict)
         self.assertIn("fixed", fix_results)
         self.assertIn("failed", fix_results)
         self.assertIsInstance(fix_results["fixed"], list)
         self.assertIsInstance(fix_results["failed"], list)
-    
+
     def test_generate_report(self):
         """测试报告生成功能"""
         # 准备测试数据
         safety_results = {"vulnerabilities": []}
         pip_audit_results = {"dependencies": []}
         fix_results = {"fixed": ["test-package"], "failed": []}
-        
+
         # 生成报告
         self.fixer.generate_report(safety_results, pip_audit_results, fix_results)
-        
+
         # 检查报告文件是否创建
         report_file = self.test_project / "security_report.md"
         self.assertTrue(report_file.exists())
-        
+
         # 检查报告内容
         with open(report_file, "r", encoding="utf-8") as f:
             content = f.read()
-        
+
         self.assertIn("安全漏洞修复报告", content)
         self.assertIn("扫描工具", content)
         self.assertIn("修复结果", content)
@@ -140,10 +140,10 @@ flask
 
 class TestProjectStructure(unittest.TestCase):
     """项目结构测试"""
-    
+
     def setUp(self):
         self.project_root = Path(__file__).parent.parent
-    
+
     def test_required_files_exist(self):
         """测试必需文件是否存在"""
         required_files = [
@@ -153,21 +153,21 @@ class TestProjectStructure(unittest.TestCase):
             ".github/workflows/security-check.yml",
             ".github/dependabot.yml",
         ]
-        
+
         for file_path in required_files:
             file_full_path = self.project_root / file_path
             self.assertTrue(
                 file_full_path.exists(),
                 f"必需文件 {file_path} 不存在"
             )
-    
+
     def test_scripts_executable(self):
         """测试脚本文件是否可执行"""
         scripts = [
             "fix_vulnerabilities.py",
             "scripts/fix_vulnerabilities.sh",
         ]
-        
+
         for script in scripts:
             script_path = self.project_root / script
             if script_path.exists():
@@ -177,41 +177,41 @@ class TestProjectStructure(unittest.TestCase):
                         os.access(script_path, os.X_OK),
                         f"脚本 {script} 没有执行权限"
                     )
-    
+
     def test_workflow_syntax(self):
         """测试GitHub工作流文件语法"""
         workflow_file = self.project_root / ".github/workflows/security-check.yml"
-        
+
         if workflow_file.exists():
             # 基本语法检查：确保文件是有效的YAML
             import yaml
             try:
                 with open(workflow_file, 'r', encoding='utf-8') as f:
                     workflow_content = yaml.safe_load(f)
-                
+
                 # 检查必要的工作流键
                 self.assertIn("name", workflow_content)
                 self.assertIn("on", workflow_content)
                 self.assertIn("jobs", workflow_content)
-                
+
             except yaml.YAMLError as e:
                 self.fail(f"工作流文件YAML语法错误: {e}")
-    
+
     def test_dependabot_syntax(self):
         """测试Dependabot配置文件语法"""
         dependabot_file = self.project_root / ".github/dependabot.yml"
-        
+
         if dependabot_file.exists():
             import yaml
             try:
                 with open(dependabot_file, 'r', encoding='utf-8') as f:
                     dependabot_content = yaml.safe_load(f)
-                
+
                 # 检查必要的Dependabot键
                 self.assertIn("version", dependabot_content)
                 self.assertIn("updates", dependabot_content)
                 self.assertEqual(dependabot_content["version"], 2)
-                
+
             except yaml.YAMLError as e:
                 self.fail(f"Dependabot配置文件YAML语法错误: {e}")
 

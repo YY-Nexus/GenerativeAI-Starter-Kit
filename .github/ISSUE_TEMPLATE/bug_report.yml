@@ -8,12 +8,12 @@ body:
     attributes:
       value: |
         感谢您花时间填写这个 bug 报告！这将帮助我们改进 genai-starter-kit。
-        
+
         在提交之前，请确保您已经：
         - 搜索过现有的 issues，确认这不是重复问题
         - 使用的是最新版本的 genai-starter-kit
         - 查看过项目文档和 README
-  
+
   - type: input
     id: version
     attributes:
@@ -22,7 +22,7 @@ body:
       placeholder: "例如: 0.2.0"
     validations:
       required: true
-  
+
   - type: input
     id: python-version
     attributes:
@@ -31,7 +31,7 @@ body:
       placeholder: "例如: 3.11.5"
     validations:
       required: true
-  
+
   - type: input
     id: os
     attributes:
@@ -40,7 +40,7 @@ body:
       placeholder: "例如: macOS 14.0, Ubuntu 22.04, Windows 11"
     validations:
       required: true
-  
+
   - type: textarea
     id: description
     attributes:
@@ -49,7 +49,7 @@ body:
       placeholder: 告诉我们发生了什么...
     validations:
       required: true
-  
+
   - type: textarea
     id: reproduction
     attributes:
@@ -61,13 +61,13 @@ body:
         3. 输入 '...'
         4. 发现错误
       value: |
-        1. 
-        2. 
-        3. 
-        4. 
+        1.
+        2.
+        3.
+        4.
     validations:
       required: true
-  
+
   - type: textarea
     id: expected
     attributes:
@@ -76,7 +76,7 @@ body:
       placeholder: 我期望...
     validations:
       required: true
-  
+
   - type: textarea
     id: actual
     attributes:
@@ -85,7 +85,7 @@ body:
       placeholder: 实际上...
     validations:
       required: true
-  
+
   - type: textarea
     id: error-logs
     attributes:
@@ -97,7 +97,7 @@ body:
             ...
         Error: ...
       render: python
-  
+
   - type: textarea
     id: code-sample
     attributes:
@@ -107,7 +107,7 @@ body:
         import genai_starter_kit
         # 你的代码...
       render: python
-  
+
   - type: textarea
     id: additional-context
     attributes:
@@ -117,7 +117,7 @@ body:
         - 是否在虚拟环境中？
         - 是否有特殊的环境配置？
         - 其他相关信息...
-  
+
   - type: checkboxes
     id: checklist
     attributes:
