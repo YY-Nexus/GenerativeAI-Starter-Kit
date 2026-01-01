@@ -53,7 +53,7 @@ jobs:
         python fix_vulnerabilities.py --report-only
         
     - name: 📤 Upload Security Reports
-      uses: actions/upload-artifact@v5
+      uses: actions/upload-artifact@v6
       with:
         name: security-reports-${{ github.sha }}
         path: |
