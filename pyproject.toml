@@ -59,7 +59,7 @@ dependencies = [
     "numpy>=2.3.3",
     "fastapi>=0.117.1",
     "requests>=2.31.0",
-    "pyyaml>=6.0",
+    "pyyaml>=6.0.3",
     "pillow>=9.0.0",
 ]
 
