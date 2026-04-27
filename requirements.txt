@@ -54,7 +54,7 @@ pydantic>=2.11.9  # 数据验证与模型定义（FastAPI 依赖）
 # 🧪 开发与调试工具
 # ===============================
 pytest>=7.4.0                  # 单元测试框架
-black>=23.0.0                  # Python 代码格式化工具
+black>=25.11.0                  # Python 代码格式化工具
 flake8>=6.0.0                  # 代码规范检查
 jupyter>=1.0.0                 # Jupyter 笔记本支持
 notebook>=6.5.0                # Jupyter 笔记本核心组件
