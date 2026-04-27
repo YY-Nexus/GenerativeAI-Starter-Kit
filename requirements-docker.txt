@@ -12,7 +12,7 @@ pandas>=2.0.0
 
 # HTTP 客户端
 requests>=2.31.0
-httpx>=0.25.0
+httpx>=0.28.1
 
 # 配置和环境
 python-dotenv>=1.0.0
